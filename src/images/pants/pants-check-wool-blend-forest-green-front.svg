@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Check Wool Blend - Forest Green - Front View</title>
+  <desc>Front view of Check Wool Blend - Forest Green. Category: Pants. Color: Forest Green. This is a demo product image.</desc>
+  <defs><pattern id="pat-121-front" patternUnits="userSpaceOnUse" width="24" height="24"><rect width="24" height="24" fill="#228B22"/><rect width="12" height="12" fill="#1c761c"/><rect x="12" y="12" width="12" height="12" fill="#1c761c"/></pattern></defs>
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Waistband -->
+    <rect x="220" y="180" width="360" height="50" rx="5" fill="#1e7d1e" stroke="#176117" stroke-width="2"/>
+    <!-- Belt loops -->
+    <rect x="260" y="175" width="12" height="60" rx="2" fill="#1b6f1b"/>
+    <rect x="395" y="175" width="12" height="60" rx="2" fill="#1b6f1b"/>
+    <rect x="530" y="175" width="12" height="60" rx="2" fill="#1b6f1b"/>
+    <!-- Left leg -->
+    <path d="M220 230 L240 650 L380 650 L400 400 Z" fill="url(#pat-121-front)" stroke="#176117" stroke-width="2"/>
+    <!-- Right leg -->
+    <path d="M400 400 L420 650 L560 650 L580 230 Z" fill="url(#pat-121-front)" stroke="#176117" stroke-width="2"/>
+    <!-- Front crease -->
+    <line x1="310" y1="280" x2="310" y2="630" stroke="#1e7d1e" stroke-width="1"/>
+    <line x1="490" y1="280" x2="490" y2="630" stroke="#1e7d1e" stroke-width="1"/>
+    <!-- Pockets -->
+    <path d="M250 240 L250 340 L340 320 L340 240" fill="none" stroke="#1b6f1b" stroke-width="1.5"/>
+    <path d="M460 240 L460 320 L550 340 L550 240" fill="none" stroke="#1b6f1b" stroke-width="1.5"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Check Wool Blend - Forest Green</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Front View • DEMO</text>
+</svg>

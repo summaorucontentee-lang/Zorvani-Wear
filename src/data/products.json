@@ -1,0 +1,2026 @@
+[
+  {
+    "id": 1,
+    "slug": "shirts-classic-oxford-white",
+    "name": "Classic Oxford - White",
+    "category": "Shirts",
+    "price": 638,
+    "mrp": 990,
+    "colors": [
+      "White",
+      "Sage Green",
+      "Lavender"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Classic Oxford - White from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish classic oxford in a beautiful white tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-classic-oxford-white-front.svg",
+      "/images/shirts/shirts-classic-oxford-white-back.svg",
+      "/images/shirts/shirts-classic-oxford-white-detail.svg",
+      "/images/shirts/shirts-classic-oxford-white-side.svg"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "shirts-slim-fit-poplin-sky-blue",
+    "name": "Slim Fit Poplin - Sky Blue",
+    "category": "Shirts",
+    "price": 687,
+    "mrp": 990,
+    "colors": [
+      "Sky Blue",
+      "Blush Pink",
+      "Mustard"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Slim Fit Poplin - Sky Blue from the Zorvani Wear demo collection. Made from pure linen. A stylish slim fit poplin in a beautiful sky blue tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pure Linen",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-front.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-back.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-detail.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-side.svg"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "shirts-casual-linen-navy",
+    "name": "Casual Linen - Navy",
+    "category": "Shirts",
+    "price": 687,
+    "mrp": 1089,
+    "colors": [
+      "Navy",
+      "Charcoal",
+      "Ivory"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Casual Linen - Navy from the Zorvani Wear demo collection. Made from cotton poplin. A stylish casual linen in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Poplin",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-casual-linen-navy-front.svg",
+      "/images/shirts/shirts-casual-linen-navy-back.svg",
+      "/images/shirts/shirts-casual-linen-navy-detail.svg",
+      "/images/shirts/shirts-casual-linen-navy-side.svg"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "shirts-mandarin-collar-sage-green",
+    "name": "Mandarin Collar - Sage Green",
+    "category": "Shirts",
+    "price": 736,
+    "mrp": 1089,
+    "colors": [
+      "Sage Green",
+      "Lavender",
+      "Burgundy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Mandarin Collar - Sage Green from the Zorvani Wear demo collection. Made from brushed flannel. A stylish mandarin collar in a beautiful sage green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Brushed Flannel",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-mandarin-collar-sage-green-front.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-back.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-detail.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-side.svg"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "shirts-relaxed-flannel-blush-pink",
+    "name": "Relaxed Flannel - Blush Pink",
+    "category": "Shirts",
+    "price": 785,
+    "mrp": 1089,
+    "colors": [
+      "Blush Pink",
+      "Mustard",
+      "Olive"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Relaxed Flannel - Blush Pink from the Zorvani Wear demo collection. Made from chambray cotton. A stylish relaxed flannel in a beautiful blush pink tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Chambray Cotton",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-front.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-back.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-detail.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-side.svg"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "shirts-stripe-formal-charcoal",
+    "name": "Stripe Formal - Charcoal",
+    "category": "Shirts",
+    "price": 785,
+    "mrp": 1188,
+    "colors": [
+      "Charcoal",
+      "Ivory",
+      "Coral"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Stripe Formal - Charcoal from the Zorvani Wear demo collection. Made from pima cotton. A stylish stripe formal in a beautiful charcoal tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pima Cotton",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-stripe-formal-charcoal-front.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-back.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-detail.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-side.svg"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "shirts-check-casual-lavender",
+    "name": "Check Casual - Lavender",
+    "category": "Shirts",
+    "price": 834,
+    "colors": [
+      "Lavender",
+      "Burgundy",
+      "White"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Check Casual - Lavender from the Zorvani Wear demo collection. Made from 100% cotton. A stylish check casual in a beautiful lavender tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "100% Cotton",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-check-casual-lavender-front.svg",
+      "/images/shirts/shirts-check-casual-lavender-back.svg",
+      "/images/shirts/shirts-check-casual-lavender-detail.svg",
+      "/images/shirts/shirts-check-casual-lavender-side.svg"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "shirts-colour-block-sport-mustard",
+    "name": "Colour Block Sport - Mustard",
+    "category": "Shirts",
+    "price": 883,
+    "colors": [
+      "Mustard",
+      "Olive",
+      "Sky Blue"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Colour Block Sport - Mustard from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish colour block sport in a beautiful mustard tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-colour-block-sport-mustard-front.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-back.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-detail.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-side.svg"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "shirts-denim-chambray-ivory",
+    "name": "Denim Chambray - Ivory",
+    "category": "Shirts",
+    "price": 883,
+    "colors": [
+      "Ivory",
+      "Coral",
+      "Navy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Denim Chambray - Ivory from the Zorvani Wear demo collection. Made from pure linen. A stylish denim chambray in a beautiful ivory tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pure Linen",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-denim-chambray-ivory-front.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-back.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-detail.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-side.svg"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "shirts-henley-knit-burgundy",
+    "name": "Henley Knit - Burgundy",
+    "category": "Shirts",
+    "price": 932,
+    "colors": [
+      "Burgundy",
+      "White",
+      "Sage Green"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Henley Knit - Burgundy from the Zorvani Wear demo collection. Made from cotton poplin. A stylish henley knit in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Poplin",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-henley-knit-burgundy-front.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-back.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-detail.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "shirts-camp-collar-resort-olive",
+    "name": "Camp Collar Resort - Olive",
+    "category": "Shirts",
+    "price": 932,
+    "colors": [
+      "Olive",
+      "Sky Blue",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Camp Collar Resort - Olive from the Zorvani Wear demo collection. Made from brushed flannel. A stylish camp collar resort in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Brushed Flannel",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": false,
+    "images": [
+      "/images/shirts/shirts-camp-collar-resort-olive-front.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-back.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-detail.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-side.svg"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "shirts-classic-oxford-white",
+    "name": "Classic Oxford - White",
+    "category": "Shirts",
+    "price": 981,
+    "colors": [
+      "White",
+      "Sage Green",
+      "Lavender"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Classic Oxford - White from the Zorvani Wear demo collection. Made from chambray cotton. A stylish classic oxford in a beautiful white tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Chambray Cotton",
+    "care": "Dry clean only",
+    "stock": false,
+    "images": [
+      "/images/shirts/shirts-classic-oxford-white-front.svg",
+      "/images/shirts/shirts-classic-oxford-white-back.svg",
+      "/images/shirts/shirts-classic-oxford-white-detail.svg",
+      "/images/shirts/shirts-classic-oxford-white-side.svg"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "shirts-slim-fit-poplin-sky-blue",
+    "name": "Slim Fit Poplin - Sky Blue",
+    "category": "Shirts",
+    "price": 1030,
+    "mrp": 1386,
+    "colors": [
+      "Sky Blue",
+      "Blush Pink",
+      "Mustard"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Slim Fit Poplin - Sky Blue from the Zorvani Wear demo collection. Made from pima cotton. A stylish slim fit poplin in a beautiful sky blue tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pima Cotton",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-front.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-back.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-detail.svg",
+      "/images/shirts/shirts-slim-fit-poplin-sky-blue-side.svg"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "shirts-casual-linen-navy",
+    "name": "Casual Linen - Navy",
+    "category": "Shirts",
+    "price": 1030,
+    "mrp": 1485,
+    "colors": [
+      "Navy",
+      "Charcoal",
+      "Ivory"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Casual Linen - Navy from the Zorvani Wear demo collection. Made from 100% cotton. A stylish casual linen in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "100% Cotton",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-casual-linen-navy-front.svg",
+      "/images/shirts/shirts-casual-linen-navy-back.svg",
+      "/images/shirts/shirts-casual-linen-navy-detail.svg",
+      "/images/shirts/shirts-casual-linen-navy-side.svg"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "shirts-mandarin-collar-sage-green",
+    "name": "Mandarin Collar - Sage Green",
+    "category": "Shirts",
+    "price": 1079,
+    "mrp": 1485,
+    "colors": [
+      "Sage Green",
+      "Lavender",
+      "Burgundy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Mandarin Collar - Sage Green from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish mandarin collar in a beautiful sage green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-mandarin-collar-sage-green-front.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-back.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-detail.svg",
+      "/images/shirts/shirts-mandarin-collar-sage-green-side.svg"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "shirts-relaxed-flannel-blush-pink",
+    "name": "Relaxed Flannel - Blush Pink",
+    "category": "Shirts",
+    "price": 1128,
+    "mrp": 1683,
+    "colors": [
+      "Blush Pink",
+      "Mustard",
+      "Olive"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Relaxed Flannel - Blush Pink from the Zorvani Wear demo collection. Made from pure linen. A stylish relaxed flannel in a beautiful blush pink tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pure Linen",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-front.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-back.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-detail.svg",
+      "/images/shirts/shirts-relaxed-flannel-blush-pink-side.svg"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "shirts-stripe-formal-charcoal",
+    "name": "Stripe Formal - Charcoal",
+    "category": "Shirts",
+    "price": 1128,
+    "mrp": 1584,
+    "colors": [
+      "Charcoal",
+      "Ivory",
+      "Coral"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Stripe Formal - Charcoal from the Zorvani Wear demo collection. Made from cotton poplin. A stylish stripe formal in a beautiful charcoal tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Poplin",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-stripe-formal-charcoal-front.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-back.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-detail.svg",
+      "/images/shirts/shirts-stripe-formal-charcoal-side.svg"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "shirts-check-casual-lavender",
+    "name": "Check Casual - Lavender",
+    "category": "Shirts",
+    "price": 1177,
+    "mrp": 1584,
+    "colors": [
+      "Lavender",
+      "Burgundy",
+      "White"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Check Casual - Lavender from the Zorvani Wear demo collection. Made from brushed flannel. A stylish check casual in a beautiful lavender tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Brushed Flannel",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-check-casual-lavender-front.svg",
+      "/images/shirts/shirts-check-casual-lavender-back.svg",
+      "/images/shirts/shirts-check-casual-lavender-detail.svg",
+      "/images/shirts/shirts-check-casual-lavender-side.svg"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "shirts-colour-block-sport-mustard",
+    "name": "Colour Block Sport - Mustard",
+    "category": "Shirts",
+    "price": 1226,
+    "mrp": 1782,
+    "colors": [
+      "Mustard",
+      "Olive",
+      "Sky Blue"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Colour Block Sport - Mustard from the Zorvani Wear demo collection. Made from chambray cotton. A stylish colour block sport in a beautiful mustard tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Chambray Cotton",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-colour-block-sport-mustard-front.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-back.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-detail.svg",
+      "/images/shirts/shirts-colour-block-sport-mustard-side.svg"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "shirts-denim-chambray-ivory",
+    "name": "Denim Chambray - Ivory",
+    "category": "Shirts",
+    "price": 1226,
+    "mrp": 1683,
+    "colors": [
+      "Ivory",
+      "Coral",
+      "Navy"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Denim Chambray - Ivory from the Zorvani Wear demo collection. Made from pima cotton. A stylish denim chambray in a beautiful ivory tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Pima Cotton",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-denim-chambray-ivory-front.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-back.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-detail.svg",
+      "/images/shirts/shirts-denim-chambray-ivory-side.svg"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "shirts-henley-knit-burgundy",
+    "name": "Henley Knit - Burgundy",
+    "category": "Shirts",
+    "price": 1275,
+    "colors": [
+      "Burgundy",
+      "White",
+      "Sage Green"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Henley Knit - Burgundy from the Zorvani Wear demo collection. Made from 100% cotton. A stylish henley knit in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "100% Cotton",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-henley-knit-burgundy-front.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-back.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-detail.svg",
+      "/images/shirts/shirts-henley-knit-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "shirts-camp-collar-resort-olive",
+    "name": "Camp Collar Resort - Olive",
+    "category": "Shirts",
+    "price": 1275,
+    "colors": [
+      "Olive",
+      "Sky Blue",
+      "Blush Pink"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Camp Collar Resort - Olive from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish camp collar resort in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shirts/shirts-camp-collar-resort-olive-front.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-back.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-detail.svg",
+      "/images/shirts/shirts-camp-collar-resort-olive-side.svg"
+    ]
+  },
+  {
+    "id": 100,
+    "slug": "pants-slim-chinos-khaki",
+    "name": "Slim Chinos - Khaki",
+    "category": "Pants",
+    "price": 1324,
+    "mrp": 1980,
+    "colors": [
+      "Khaki",
+      "Olive",
+      "Stone"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Slim Chinos - Khaki from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish slim chinos in a beautiful khaki tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-slim-chinos-khaki-front.svg",
+      "/images/pants/pants-slim-chinos-khaki-back.svg",
+      "/images/pants/pants-slim-chinos-khaki-detail.svg",
+      "/images/pants/pants-slim-chinos-khaki-side.svg"
+    ]
+  },
+  {
+    "id": 101,
+    "slug": "pants-relaxed-joggers-black",
+    "name": "Relaxed Joggers - Black",
+    "category": "Pants",
+    "price": 1324,
+    "mrp": 1881,
+    "colors": [
+      "Black",
+      "Charcoal",
+      "Dark Wash"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Relaxed Joggers - Black from the Zorvani Wear demo collection. Made from french terry. A stylish relaxed joggers in a beautiful black tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "French Terry",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-relaxed-joggers-black-front.svg",
+      "/images/pants/pants-relaxed-joggers-black-back.svg",
+      "/images/pants/pants-relaxed-joggers-black-detail.svg",
+      "/images/pants/pants-relaxed-joggers-black-side.svg"
+    ]
+  },
+  {
+    "id": 102,
+    "slug": "pants-straight-fit-trousers-navy",
+    "name": "Straight Fit Trousers - Navy",
+    "category": "Pants",
+    "price": 1373,
+    "mrp": 1782,
+    "colors": [
+      "Navy",
+      "Beige",
+      "Light Wash"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Straight Fit Trousers - Navy from the Zorvani Wear demo collection. Made from wool blend. A stylish straight fit trousers in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Wool Blend",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-straight-fit-trousers-navy-front.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-back.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-detail.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-side.svg"
+    ]
+  },
+  {
+    "id": 103,
+    "slug": "pants-cargo-pants-olive",
+    "name": "Cargo Pants - Olive",
+    "category": "Pants",
+    "price": 1422,
+    "mrp": 2079,
+    "colors": [
+      "Olive",
+      "Stone",
+      "Burgundy"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Cargo Pants - Olive from the Zorvani Wear demo collection. Made from raw denim. A stylish cargo pants in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Raw Denim",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-cargo-pants-olive-front.svg",
+      "/images/pants/pants-cargo-pants-olive-back.svg",
+      "/images/pants/pants-cargo-pants-olive-detail.svg",
+      "/images/pants/pants-cargo-pants-olive-side.svg"
+    ]
+  },
+  {
+    "id": 104,
+    "slug": "pants-tailored-formal-charcoal",
+    "name": "Tailored Formal - Charcoal",
+    "category": "Pants",
+    "price": 1422,
+    "mrp": 1881,
+    "colors": [
+      "Charcoal",
+      "Dark Wash",
+      "Forest Green"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Tailored Formal - Charcoal from the Zorvani Wear demo collection. Made from linen. A stylish tailored formal in a beautiful charcoal tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Linen",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-tailored-formal-charcoal-front.svg",
+      "/images/pants/pants-tailored-formal-charcoal-back.svg",
+      "/images/pants/pants-tailored-formal-charcoal-detail.svg",
+      "/images/pants/pants-tailored-formal-charcoal-side.svg"
+    ]
+  },
+  {
+    "id": 105,
+    "slug": "pants-colour-block-track-beige",
+    "name": "Colour Block Track - Beige",
+    "category": "Pants",
+    "price": 1471,
+    "mrp": 1881,
+    "colors": [
+      "Beige",
+      "Light Wash",
+      "Slate Blue"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Colour Block Track - Beige from the Zorvani Wear demo collection. Made from cotton twill. A stylish colour block track in a beautiful beige tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Twill",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-colour-block-track-beige-front.svg",
+      "/images/pants/pants-colour-block-track-beige-back.svg",
+      "/images/pants/pants-colour-block-track-beige-detail.svg",
+      "/images/pants/pants-colour-block-track-beige-side.svg"
+    ]
+  },
+  {
+    "id": 106,
+    "slug": "pants-stripe-lounge-stone",
+    "name": "Stripe Lounge - Stone",
+    "category": "Pants",
+    "price": 1520,
+    "mrp": 2079,
+    "colors": [
+      "Stone",
+      "Burgundy",
+      "Khaki"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Stripe Lounge - Stone from the Zorvani Wear demo collection. Made from stretch cotton. A stylish stripe lounge in a beautiful stone tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Stretch Cotton",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-stripe-lounge-stone-front.svg",
+      "/images/pants/pants-stripe-lounge-stone-back.svg",
+      "/images/pants/pants-stripe-lounge-stone-detail.svg",
+      "/images/pants/pants-stripe-lounge-stone-side.svg"
+    ]
+  },
+  {
+    "id": 107,
+    "slug": "pants-pleated-wide-leg-dark-wash",
+    "name": "Pleated Wide Leg - Dark Wash",
+    "category": "Pants",
+    "price": 1520,
+    "colors": [
+      "Dark Wash",
+      "Forest Green",
+      "Black"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Pleated Wide Leg - Dark Wash from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish pleated wide leg in a beautiful dark wash tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-pleated-wide-leg-dark-wash-front.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-back.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-detail.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-side.svg"
+    ]
+  },
+  {
+    "id": 108,
+    "slug": "pants-linen-drawstring-light-wash",
+    "name": "Linen Drawstring - Light Wash",
+    "category": "Pants",
+    "price": 1569,
+    "colors": [
+      "Light Wash",
+      "Slate Blue",
+      "Navy"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Linen Drawstring - Light Wash from the Zorvani Wear demo collection. Made from french terry. A stylish linen drawstring in a beautiful light wash tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "French Terry",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-linen-drawstring-light-wash-front.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-back.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-detail.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-side.svg"
+    ]
+  },
+  {
+    "id": 109,
+    "slug": "pants-denim-slim-burgundy",
+    "name": "Denim Slim - Burgundy",
+    "category": "Pants",
+    "price": 1569,
+    "colors": [
+      "Burgundy",
+      "Khaki",
+      "Olive"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Denim Slim - Burgundy from the Zorvani Wear demo collection. Made from wool blend. A stylish denim slim in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Wool Blend",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-denim-slim-burgundy-front.svg",
+      "/images/pants/pants-denim-slim-burgundy-back.svg",
+      "/images/pants/pants-denim-slim-burgundy-detail.svg",
+      "/images/pants/pants-denim-slim-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 110,
+    "slug": "pants-check-wool-blend-forest-green",
+    "name": "Check Wool Blend - Forest Green",
+    "category": "Pants",
+    "price": 1618,
+    "colors": [
+      "Forest Green",
+      "Black",
+      "Charcoal"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Check Wool Blend - Forest Green from the Zorvani Wear demo collection. Made from raw denim. A stylish check wool blend in a beautiful forest green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Raw Denim",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-check-wool-blend-forest-green-front.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-back.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-detail.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-side.svg"
+    ]
+  },
+  {
+    "id": 111,
+    "slug": "pants-slim-chinos-khaki",
+    "name": "Slim Chinos - Khaki",
+    "category": "Pants",
+    "price": 1667,
+    "colors": [
+      "Khaki",
+      "Olive",
+      "Stone"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Slim Chinos - Khaki from the Zorvani Wear demo collection. Made from linen. A stylish slim chinos in a beautiful khaki tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Linen",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": false,
+    "images": [
+      "/images/pants/pants-slim-chinos-khaki-front.svg",
+      "/images/pants/pants-slim-chinos-khaki-back.svg",
+      "/images/pants/pants-slim-chinos-khaki-detail.svg",
+      "/images/pants/pants-slim-chinos-khaki-side.svg"
+    ]
+  },
+  {
+    "id": 112,
+    "slug": "pants-relaxed-joggers-black",
+    "name": "Relaxed Joggers - Black",
+    "category": "Pants",
+    "price": 1667,
+    "colors": [
+      "Black",
+      "Charcoal",
+      "Dark Wash"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Relaxed Joggers - Black from the Zorvani Wear demo collection. Made from cotton twill. A stylish relaxed joggers in a beautiful black tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Twill",
+    "care": "Hand wash recommended, hang dry",
+    "stock": false,
+    "images": [
+      "/images/pants/pants-relaxed-joggers-black-front.svg",
+      "/images/pants/pants-relaxed-joggers-black-back.svg",
+      "/images/pants/pants-relaxed-joggers-black-detail.svg",
+      "/images/pants/pants-relaxed-joggers-black-side.svg"
+    ]
+  },
+  {
+    "id": 113,
+    "slug": "pants-straight-fit-trousers-navy",
+    "name": "Straight Fit Trousers - Navy",
+    "category": "Pants",
+    "price": 1716,
+    "mrp": 2475,
+    "colors": [
+      "Navy",
+      "Beige",
+      "Light Wash"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Straight Fit Trousers - Navy from the Zorvani Wear demo collection. Made from stretch cotton. A stylish straight fit trousers in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Stretch Cotton",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-straight-fit-trousers-navy-front.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-back.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-detail.svg",
+      "/images/pants/pants-straight-fit-trousers-navy-side.svg"
+    ]
+  },
+  {
+    "id": 114,
+    "slug": "pants-cargo-pants-olive",
+    "name": "Cargo Pants - Olive",
+    "category": "Pants",
+    "price": 1765,
+    "mrp": 2475,
+    "colors": [
+      "Olive",
+      "Stone",
+      "Burgundy"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Cargo Pants - Olive from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish cargo pants in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-cargo-pants-olive-front.svg",
+      "/images/pants/pants-cargo-pants-olive-back.svg",
+      "/images/pants/pants-cargo-pants-olive-detail.svg",
+      "/images/pants/pants-cargo-pants-olive-side.svg"
+    ]
+  },
+  {
+    "id": 115,
+    "slug": "pants-tailored-formal-charcoal",
+    "name": "Tailored Formal - Charcoal",
+    "category": "Pants",
+    "price": 1765,
+    "mrp": 2277,
+    "colors": [
+      "Charcoal",
+      "Dark Wash",
+      "Forest Green"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Tailored Formal - Charcoal from the Zorvani Wear demo collection. Made from french terry. A stylish tailored formal in a beautiful charcoal tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "French Terry",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-tailored-formal-charcoal-front.svg",
+      "/images/pants/pants-tailored-formal-charcoal-back.svg",
+      "/images/pants/pants-tailored-formal-charcoal-detail.svg",
+      "/images/pants/pants-tailored-formal-charcoal-side.svg"
+    ]
+  },
+  {
+    "id": 116,
+    "slug": "pants-colour-block-track-beige",
+    "name": "Colour Block Track - Beige",
+    "category": "Pants",
+    "price": 1814,
+    "mrp": 2574,
+    "colors": [
+      "Beige",
+      "Light Wash",
+      "Slate Blue"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Colour Block Track - Beige from the Zorvani Wear demo collection. Made from wool blend. A stylish colour block track in a beautiful beige tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Wool Blend",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-colour-block-track-beige-front.svg",
+      "/images/pants/pants-colour-block-track-beige-back.svg",
+      "/images/pants/pants-colour-block-track-beige-detail.svg",
+      "/images/pants/pants-colour-block-track-beige-side.svg"
+    ]
+  },
+  {
+    "id": 117,
+    "slug": "pants-stripe-lounge-stone",
+    "name": "Stripe Lounge - Stone",
+    "category": "Pants",
+    "price": 1863,
+    "mrp": 2475,
+    "colors": [
+      "Stone",
+      "Burgundy",
+      "Khaki"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Stripe Lounge - Stone from the Zorvani Wear demo collection. Made from raw denim. A stylish stripe lounge in a beautiful stone tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Raw Denim",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-stripe-lounge-stone-front.svg",
+      "/images/pants/pants-stripe-lounge-stone-back.svg",
+      "/images/pants/pants-stripe-lounge-stone-detail.svg",
+      "/images/pants/pants-stripe-lounge-stone-side.svg"
+    ]
+  },
+  {
+    "id": 118,
+    "slug": "pants-pleated-wide-leg-dark-wash",
+    "name": "Pleated Wide Leg - Dark Wash",
+    "category": "Pants",
+    "price": 1863,
+    "mrp": 2376,
+    "colors": [
+      "Dark Wash",
+      "Forest Green",
+      "Black"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Pleated Wide Leg - Dark Wash from the Zorvani Wear demo collection. Made from linen. A stylish pleated wide leg in a beautiful dark wash tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Linen",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-pleated-wide-leg-dark-wash-front.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-back.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-detail.svg",
+      "/images/pants/pants-pleated-wide-leg-dark-wash-side.svg"
+    ]
+  },
+  {
+    "id": 119,
+    "slug": "pants-linen-drawstring-light-wash",
+    "name": "Linen Drawstring - Light Wash",
+    "category": "Pants",
+    "price": 1912,
+    "mrp": 2673,
+    "colors": [
+      "Light Wash",
+      "Slate Blue",
+      "Navy"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Linen Drawstring - Light Wash from the Zorvani Wear demo collection. Made from cotton twill. A stylish linen drawstring in a beautiful light wash tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton Twill",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-linen-drawstring-light-wash-front.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-back.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-detail.svg",
+      "/images/pants/pants-linen-drawstring-light-wash-side.svg"
+    ]
+  },
+  {
+    "id": 120,
+    "slug": "pants-denim-slim-burgundy",
+    "name": "Denim Slim - Burgundy",
+    "category": "Pants",
+    "price": 1912,
+    "mrp": 2475,
+    "colors": [
+      "Burgundy",
+      "Khaki",
+      "Olive"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Denim Slim - Burgundy from the Zorvani Wear demo collection. Made from stretch cotton. A stylish denim slim in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Stretch Cotton",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-denim-slim-burgundy-front.svg",
+      "/images/pants/pants-denim-slim-burgundy-back.svg",
+      "/images/pants/pants-denim-slim-burgundy-detail.svg",
+      "/images/pants/pants-denim-slim-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 121,
+    "slug": "pants-check-wool-blend-forest-green",
+    "name": "Check Wool Blend - Forest Green",
+    "category": "Pants",
+    "price": 1961,
+    "colors": [
+      "Forest Green",
+      "Black",
+      "Charcoal"
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "description": "Check Wool Blend - Forest Green from the Zorvani Wear demo collection. Made from cotton-linen blend. A stylish check wool blend in a beautiful forest green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Cotton-Linen Blend",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/pants/pants-check-wool-blend-forest-green-front.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-back.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-detail.svg",
+      "/images/pants/pants-check-wool-blend-forest-green-side.svg"
+    ]
+  },
+  {
+    "id": 200,
+    "slug": "shoes-canvas-sneakers-white",
+    "name": "Canvas Sneakers - White",
+    "category": "Shoes",
+    "price": 2304,
+    "mrp": 3267,
+    "colors": [
+      "White",
+      "Navy",
+      "Olive"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Canvas Sneakers - White from the Zorvani Wear demo collection. Made from premium leather. A stylish canvas sneakers in a beautiful white tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Premium Leather",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-canvas-sneakers-white-front.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-back.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-detail.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-side.svg"
+    ]
+  },
+  {
+    "id": 201,
+    "slug": "shoes-leather-derby-black",
+    "name": "Leather Derby - Black",
+    "category": "Shoes",
+    "price": 2353,
+    "mrp": 3168,
+    "colors": [
+      "Black",
+      "Burgundy",
+      "Camel"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Leather Derby - Black from the Zorvani Wear demo collection. Made from vegan leather. A stylish leather derby in a beautiful black tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Vegan Leather",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-leather-derby-black-front.svg",
+      "/images/shoes/shoes-leather-derby-black-back.svg",
+      "/images/shoes/shoes-leather-derby-black-detail.svg",
+      "/images/shoes/shoes-leather-derby-black-side.svg"
+    ]
+  },
+  {
+    "id": 202,
+    "slug": "shoes-suede-loafers-tan",
+    "name": "Suede Loafers - Tan",
+    "category": "Shoes",
+    "price": 2353,
+    "mrp": 2970,
+    "colors": [
+      "Tan",
+      "Grey",
+      "Sand"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Suede Loafers - Tan from the Zorvani Wear demo collection. Made from woven textile. A stylish suede loafers in a beautiful tan tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Woven Textile",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-suede-loafers-tan-front.svg",
+      "/images/shoes/shoes-suede-loafers-tan-back.svg",
+      "/images/shoes/shoes-suede-loafers-tan-detail.svg",
+      "/images/shoes/shoes-suede-loafers-tan-side.svg"
+    ]
+  },
+  {
+    "id": 203,
+    "slug": "shoes-running-trainers-navy",
+    "name": "Running Trainers - Navy",
+    "category": "Shoes",
+    "price": 2402,
+    "mrp": 3366,
+    "colors": [
+      "Navy",
+      "Olive",
+      "Rust"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Running Trainers - Navy from the Zorvani Wear demo collection. Made from canvas upper. A stylish running trainers in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Canvas Upper",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-running-trainers-navy-front.svg",
+      "/images/shoes/shoes-running-trainers-navy-back.svg",
+      "/images/shoes/shoes-running-trainers-navy-detail.svg",
+      "/images/shoes/shoes-running-trainers-navy-side.svg"
+    ]
+  },
+  {
+    "id": 204,
+    "slug": "shoes-colour-block-high-tops-burgundy",
+    "name": "Colour Block High Tops - Burgundy",
+    "category": "Shoes",
+    "price": 2451,
+    "mrp": 3168,
+    "colors": [
+      "Burgundy",
+      "Camel",
+      "Forest Green"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Colour Block High Tops - Burgundy from the Zorvani Wear demo collection. Made from full-grain leather. A stylish colour block high tops in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Full-Grain Leather",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-front.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-back.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-detail.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 205,
+    "slug": "shoes-brogue-oxfords-grey",
+    "name": "Brogue Oxfords - Grey",
+    "category": "Shoes",
+    "price": 2451,
+    "mrp": 3465,
+    "colors": [
+      "Grey",
+      "Sand",
+      "Cognac"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Brogue Oxfords - Grey from the Zorvani Wear demo collection. Made from suede. A stylish brogue oxfords in a beautiful grey tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Suede",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-brogue-oxfords-grey-front.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-back.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-detail.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-side.svg"
+    ]
+  },
+  {
+    "id": 206,
+    "slug": "shoes-slip-on-mules-olive",
+    "name": "Slip-On Mules - Olive",
+    "category": "Shoes",
+    "price": 2500,
+    "mrp": 3366,
+    "colors": [
+      "Olive",
+      "Rust",
+      "White"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Slip-On Mules - Olive from the Zorvani Wear demo collection. Made from knit mesh. A stylish slip-on mules in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Knit Mesh",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-slip-on-mules-olive-front.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-back.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-detail.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-side.svg"
+    ]
+  },
+  {
+    "id": 207,
+    "slug": "shoes-chelsea-boots-camel",
+    "name": "Chelsea Boots - Camel",
+    "category": "Shoes",
+    "price": 2549,
+    "colors": [
+      "Camel",
+      "Forest Green",
+      "Black"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Chelsea Boots - Camel from the Zorvani Wear demo collection. Made from premium leather. A stylish chelsea boots in a beautiful camel tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Premium Leather",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-chelsea-boots-camel-front.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-back.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-detail.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-side.svg"
+    ]
+  },
+  {
+    "id": 208,
+    "slug": "shoes-stripe-espadrilles-sand",
+    "name": "Stripe Espadrilles - Sand",
+    "category": "Shoes",
+    "price": 2549,
+    "colors": [
+      "Sand",
+      "Cognac",
+      "Tan"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Stripe Espadrilles - Sand from the Zorvani Wear demo collection. Made from vegan leather. A stylish stripe espadrilles in a beautiful sand tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Vegan Leather",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-stripe-espadrilles-sand-front.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-back.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-detail.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-side.svg"
+    ]
+  },
+  {
+    "id": 209,
+    "slug": "shoes-knit-sport-rust",
+    "name": "Knit Sport - Rust",
+    "category": "Shoes",
+    "price": 2598,
+    "colors": [
+      "Rust",
+      "White",
+      "Navy"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Knit Sport - Rust from the Zorvani Wear demo collection. Made from woven textile. A stylish knit sport in a beautiful rust tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Woven Textile",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-knit-sport-rust-front.svg",
+      "/images/shoes/shoes-knit-sport-rust-back.svg",
+      "/images/shoes/shoes-knit-sport-rust-detail.svg",
+      "/images/shoes/shoes-knit-sport-rust-side.svg"
+    ]
+  },
+  {
+    "id": 210,
+    "slug": "shoes-monk-strap-formal-forest-green",
+    "name": "Monk Strap Formal - Forest Green",
+    "category": "Shoes",
+    "price": 2647,
+    "colors": [
+      "Forest Green",
+      "Black",
+      "Burgundy"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Monk Strap Formal - Forest Green from the Zorvani Wear demo collection. Made from canvas upper. A stylish monk strap formal in a beautiful forest green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Canvas Upper",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-monk-strap-formal-forest-green-front.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-back.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-detail.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-side.svg"
+    ]
+  },
+  {
+    "id": 211,
+    "slug": "shoes-canvas-sneakers-white",
+    "name": "Canvas Sneakers - White",
+    "category": "Shoes",
+    "price": 2647,
+    "colors": [
+      "White",
+      "Navy",
+      "Olive"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Canvas Sneakers - White from the Zorvani Wear demo collection. Made from full-grain leather. A stylish canvas sneakers in a beautiful white tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Full-Grain Leather",
+    "care": "Spot clean with damp cloth",
+    "stock": false,
+    "images": [
+      "/images/shoes/shoes-canvas-sneakers-white-front.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-back.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-detail.svg",
+      "/images/shoes/shoes-canvas-sneakers-white-side.svg"
+    ]
+  },
+  {
+    "id": 212,
+    "slug": "shoes-leather-derby-black",
+    "name": "Leather Derby - Black",
+    "category": "Shoes",
+    "price": 2696,
+    "colors": [
+      "Black",
+      "Burgundy",
+      "Camel"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Leather Derby - Black from the Zorvani Wear demo collection. Made from suede. A stylish leather derby in a beautiful black tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Suede",
+    "care": "Machine wash cold, iron on low",
+    "stock": false,
+    "images": [
+      "/images/shoes/shoes-leather-derby-black-front.svg",
+      "/images/shoes/shoes-leather-derby-black-back.svg",
+      "/images/shoes/shoes-leather-derby-black-detail.svg",
+      "/images/shoes/shoes-leather-derby-black-side.svg"
+    ]
+  },
+  {
+    "id": 213,
+    "slug": "shoes-suede-loafers-tan",
+    "name": "Suede Loafers - Tan",
+    "category": "Shoes",
+    "price": 2696,
+    "mrp": 3861,
+    "colors": [
+      "Tan",
+      "Grey",
+      "Sand"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Suede Loafers - Tan from the Zorvani Wear demo collection. Made from knit mesh. A stylish suede loafers in a beautiful tan tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Knit Mesh",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-suede-loafers-tan-front.svg",
+      "/images/shoes/shoes-suede-loafers-tan-back.svg",
+      "/images/shoes/shoes-suede-loafers-tan-detail.svg",
+      "/images/shoes/shoes-suede-loafers-tan-side.svg"
+    ]
+  },
+  {
+    "id": 214,
+    "slug": "shoes-running-trainers-navy",
+    "name": "Running Trainers - Navy",
+    "category": "Shoes",
+    "price": 2745,
+    "mrp": 3663,
+    "colors": [
+      "Navy",
+      "Olive",
+      "Rust"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Running Trainers - Navy from the Zorvani Wear demo collection. Made from premium leather. A stylish running trainers in a beautiful navy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Premium Leather",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-running-trainers-navy-front.svg",
+      "/images/shoes/shoes-running-trainers-navy-back.svg",
+      "/images/shoes/shoes-running-trainers-navy-detail.svg",
+      "/images/shoes/shoes-running-trainers-navy-side.svg"
+    ]
+  },
+  {
+    "id": 215,
+    "slug": "shoes-colour-block-high-tops-burgundy",
+    "name": "Colour Block High Tops - Burgundy",
+    "category": "Shoes",
+    "price": 2794,
+    "mrp": 3465,
+    "colors": [
+      "Burgundy",
+      "Camel",
+      "Forest Green"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Colour Block High Tops - Burgundy from the Zorvani Wear demo collection. Made from vegan leather. A stylish colour block high tops in a beautiful burgundy tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Vegan Leather",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-front.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-back.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-detail.svg",
+      "/images/shoes/shoes-colour-block-high-tops-burgundy-side.svg"
+    ]
+  },
+  {
+    "id": 216,
+    "slug": "shoes-brogue-oxfords-grey",
+    "name": "Brogue Oxfords - Grey",
+    "category": "Shoes",
+    "price": 2794,
+    "mrp": 3861,
+    "colors": [
+      "Grey",
+      "Sand",
+      "Cognac"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Brogue Oxfords - Grey from the Zorvani Wear demo collection. Made from woven textile. A stylish brogue oxfords in a beautiful grey tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Woven Textile",
+    "care": "Dry clean only",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-brogue-oxfords-grey-front.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-back.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-detail.svg",
+      "/images/shoes/shoes-brogue-oxfords-grey-side.svg"
+    ]
+  },
+  {
+    "id": 217,
+    "slug": "shoes-slip-on-mules-olive",
+    "name": "Slip-On Mules - Olive",
+    "category": "Shoes",
+    "price": 2843,
+    "mrp": 3663,
+    "colors": [
+      "Olive",
+      "Rust",
+      "White"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Slip-On Mules - Olive from the Zorvani Wear demo collection. Made from canvas upper. A stylish slip-on mules in a beautiful olive tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Canvas Upper",
+    "care": "Spot clean with damp cloth",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-slip-on-mules-olive-front.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-back.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-detail.svg",
+      "/images/shoes/shoes-slip-on-mules-olive-side.svg"
+    ]
+  },
+  {
+    "id": 218,
+    "slug": "shoes-chelsea-boots-camel",
+    "name": "Chelsea Boots - Camel",
+    "category": "Shoes",
+    "price": 2892,
+    "mrp": 4158,
+    "colors": [
+      "Camel",
+      "Forest Green",
+      "Black"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Chelsea Boots - Camel from the Zorvani Wear demo collection. Made from full-grain leather. A stylish chelsea boots in a beautiful camel tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Full-Grain Leather",
+    "care": "Machine wash cold, iron on low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-chelsea-boots-camel-front.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-back.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-detail.svg",
+      "/images/shoes/shoes-chelsea-boots-camel-side.svg"
+    ]
+  },
+  {
+    "id": 219,
+    "slug": "shoes-stripe-espadrilles-sand",
+    "name": "Stripe Espadrilles - Sand",
+    "category": "Shoes",
+    "price": 2892,
+    "mrp": 3960,
+    "colors": [
+      "Sand",
+      "Cognac",
+      "Tan"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Stripe Espadrilles - Sand from the Zorvani Wear demo collection. Made from suede. A stylish stripe espadrilles in a beautiful sand tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Suede",
+    "care": "Machine wash cold, tumble dry low",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-stripe-espadrilles-sand-front.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-back.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-detail.svg",
+      "/images/shoes/shoes-stripe-espadrilles-sand-side.svg"
+    ]
+  },
+  {
+    "id": 220,
+    "slug": "shoes-knit-sport-rust",
+    "name": "Knit Sport - Rust",
+    "category": "Shoes",
+    "price": 2941,
+    "mrp": 3762,
+    "colors": [
+      "Rust",
+      "White",
+      "Navy"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Knit Sport - Rust from the Zorvani Wear demo collection. Made from knit mesh. A stylish knit sport in a beautiful rust tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Knit Mesh",
+    "care": "Hand wash recommended, hang dry",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-knit-sport-rust-front.svg",
+      "/images/shoes/shoes-knit-sport-rust-back.svg",
+      "/images/shoes/shoes-knit-sport-rust-detail.svg",
+      "/images/shoes/shoes-knit-sport-rust-side.svg"
+    ]
+  },
+  {
+    "id": 221,
+    "slug": "shoes-monk-strap-formal-forest-green",
+    "name": "Monk Strap Formal - Forest Green",
+    "category": "Shoes",
+    "price": 2941,
+    "colors": [
+      "Forest Green",
+      "Black",
+      "Burgundy"
+    ],
+    "sizes": [
+      "UK6",
+      "UK7",
+      "UK8",
+      "UK9",
+      "UK10",
+      "UK11"
+    ],
+    "description": "Monk Strap Formal - Forest Green from the Zorvani Wear demo collection. Made from premium leather. A stylish monk strap formal in a beautiful forest green tone. Perfect for any occasion. This is a demo product — not for sale.",
+    "material": "Premium Leather",
+    "care": "Machine wash gentle cycle, do not bleach",
+    "stock": true,
+    "images": [
+      "/images/shoes/shoes-monk-strap-formal-forest-green-front.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-back.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-detail.svg",
+      "/images/shoes/shoes-monk-strap-formal-forest-green-side.svg"
+    ]
+  }
+]

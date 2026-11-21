@@ -1,0 +1,40 @@
+ZORVANI WEAR (DEMO) - AUTOMATED VERIFICATION REPORT
+======================================================
+Generated: 2026-11-20
+Status: ALL TESTS PASSED (136/136)
+
+1. DATA & ASSET GENERATION
+- Products: 66 total (22 Shirts, 22 Pants, 22 Shoes)
+- Images: 264 bespoke SVG illustrations (4 views per product: front, back, detail, side)
+- Sitemaps: src/sitemap.xml (10 static + 66 product URLs), src/robots.txt
+
+2. UNIT TESTS (Node.js Test Runner)
+- Total Tests: 46
+- Passed: 46
+- Failed: 0
+- Modules Covered:
+  * config.test.js: 6 tests (INR formatting, Lakhs grouping, zero, constants)
+  * cart.test.js: 10 tests (add, size requirement, duplicate qty increment, totals, remove, clear, localStorage)
+  * filters.test.js: 14 tests (category, size, color, price range, search, sort low/high/newest)
+  * validation.test.js: 11 tests (name, 10-digit phone, 6-digit pincode, address, city, aggregate form)
+  * orders.test.js: 5 tests (ID prefix ZW-DEMO-, order builder, localStorage, WhatsApp URL)
+  * images.test.js: 3 tests (60+ products verified, 264 SVGs verified on disk with 800x800 viewBox)
+
+3. END-TO-END TESTS (Playwright)
+- Total Tests: 90
+- Passed: 90
+- Failed: 0
+- Browsers/Projects:
+  * Desktop Chrome: 45 passed
+  * Mobile Chrome (Pixel 5 Viewport): 45 passed
+- Specs Covered:
+  * home.spec.js: demo banner, hero, 3 category tiles, 8 featured items, 3-step ordering, footer
+  * shop.spec.js: 60+ items, load more pagination, >=20 items per category, sort, search, filters, empty state
+  * product.spec.js: gallery thumbnail click & arrow keys, size required error, add to cart, quantity controls, size guide, empty reviews notice
+  * cart.spec.js: empty state, item controls, totals, reload persistence, remove
+  * checkout.spec.js: validation errors, valid submit, WhatsApp URL generation, Thank You redirect, cart clearing
+  * orders.spec.js: demo order ledger, clear orders
+  * datalayer.spec.js: view_item_list, view_item, add_to_cart, view_cart, begin_checkout, purchase
+  * general.spec.js: zero console errors on 11 pages, zero broken image requests, INR currency only, 404 page
+
+Full HTML Report: test-report/index.html

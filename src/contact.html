@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us (Demo) | Zorvani Wear (DEMO)</title>
+  <meta name="description" content="Get in touch with the Zorvani Wear demo team. Simulated contact form and fictional inquiry channel.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <div class="demo-banner">DEMO STORE: no real products, no real payments</div>
+
+  <header class="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Zorvani Wear (DEMO) - Home">
+        <span class="logo-text">Zorvani</span>
+        <span class="logo-accent">Wear</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/cart.html" class="cart-link" aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding-top: 2.5rem; padding-bottom: 4rem; max-width: 800px;">
+    <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--navy); margin-bottom: 1.5rem;">Contact Us (Demo)</h1>
+
+    <div class="alert alert-warning" style="background: #fff3cd; color: #856404; padding: 1rem 1.25rem; border-radius: var(--radius); border-left: 4px solid var(--warning); margin-bottom: 2rem;">
+      <strong>Demo Store Notice:</strong> All contact addresses, emails, and phone numbers below are completely fictional. This form is for demo purposes and does not send any messages.
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+      <!-- Contact Info -->
+      <div>
+        <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem;">Fictional Headquarters</h2>
+        <div style="line-height: 1.8; color: var(--text); font-size: 0.95rem;">
+          <p style="margin-bottom: 0.75rem;">
+            <strong>Address:</strong><br>
+            Zorvani Wear Atelier (Demo)<br>
+            404 Fashion Boulevard, Suite 101<br>
+            Bandra West, Mumbai 400050, India
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            <strong>Simulated Phone:</strong><br>
+            +91 98765 43210 (Demo Placeholder)
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            <strong>Simulated Email:</strong><br>
+            concierge@zorvaniwear.demo
+          </p>
+          <p>
+            <strong>Hours:</strong><br>
+            Monday – Friday: 10:00 AM – 7:00 PM IST
+          </p>
+        </div>
+      </div>
+
+      <!-- Demo Message Form -->
+      <div>
+        <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem;">Send a Simulated Inquiry</h2>
+        <form id="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <label for="contact-name" style="display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--navy);">Your Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="e.g. Priya Patel" required>
+          </div>
+          <div>
+            <label for="contact-email" style="display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--navy);">Email Address</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="e.g. priya@example.com" required>
+          </div>
+          <div>
+            <label for="contact-message" style="display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--navy);">Message</label>
+            <textarea id="contact-message" class="form-input" rows="4" placeholder="How can we assist you with our demo collection?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="padding: 0.85rem;">Send Demo Message</button>
+          <div id="contact-feedback" style="display: none; background: #e8f5e9; color: #2e7d32; padding: 0.75rem; border-radius: var(--radius); font-size: 0.9rem;">
+            Thank you! This form is for demo purposes and does not send any messages.
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-heading">
+          <span class="logo-text">Zorvani</span>
+          <span class="logo-accent">Wear</span>
+        </h3>
+        <p class="footer-desc">A demo fashion e-commerce site. All products, prices, and data are entirely fictional. No real payments or shipments.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Shop</h3>
+        <ul class="footer-links">
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/shop.html">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/shipping.html">Shipping Info</a></li>
+          <li><a href="/returns.html">Returns & Exchanges</a></li>
+          <li><a href="/orders.html">Order History</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Zorvani Wear (DEMO). DEMO STORE: no real products, no real payments.</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initHeader } from '/js/header.js';
+    initHeader();
+
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('contact-feedback');
+    if (form && feedback) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        feedback.style.display = 'block';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>

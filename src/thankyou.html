@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed (Demo) | Zorvani Wear (DEMO)</title>
+  <meta name="description" content="Thank you for placing your demo order with Zorvani Wear. All details shown are simulated and no payment was collected.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <div class="demo-banner">DEMO STORE: no real products, no real payments</div>
+
+  <header class="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Zorvani Wear (DEMO) - Home">
+        <span class="logo-text">Zorvani</span>
+        <span class="logo-accent">Wear</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/cart.html" class="cart-link" aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding-top: 2.5rem; padding-bottom: 4rem; max-width: 800px;">
+    <!-- Not Found State -->
+    <div id="thankyou-not-found" style="display: none; text-align: center; padding: 4rem 1rem;">
+      <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--navy); margin-bottom: 0.75rem;">No Demo Order Found</h2>
+      <p style="color: var(--text-light); margin-bottom: 1.5rem;">We couldn't locate this demo order in your browser session.</p>
+      <a href="/shop.html" class="btn-primary">Browse Shop</a>
+    </div>
+
+    <!-- Success Card -->
+    <div id="thankyou-success-card" style="display: none;">
+      <!-- Success Banner -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 64px; height: 64px; background: #e8f5e9; color: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">
+          ✓
+        </div>
+        <h1 style="font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem;">Thank You! Demo Order Placed</h1>
+        <p style="color: var(--text-light); font-size: 1.05rem;">
+          Your simulated order has been registered in local browser storage.
+        </p>
+      </div>
+
+      <!-- Demo Notification Alert -->
+      <div class="alert alert-info" style="background: #e3f2fd; color: #0d47a1; padding: 1rem 1.25rem; border-radius: var(--radius); border-left: 4px solid #1976d2; margin-bottom: 2rem;">
+        <strong>Notice:</strong> This is a demo order. No payment was collected, and no real delivery will take place.
+      </div>
+
+      <!-- Order Details Card -->
+      <div style="background: var(--light-gray); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--text-light); display: block;">Demo Order ID</span>
+            <strong id="thankyou-order-id" style="font-size: 1.25rem; color: var(--navy);"></strong>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.85rem; color: var(--text-light); display: block;">Date</span>
+            <span id="thankyou-order-date" style="font-weight: 600; color: var(--text);"></span>
+          </div>
+        </div>
+
+        <!-- Customer Summary -->
+        <div style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Delivery Address</h2>
+          <div id="thankyou-customer-details" style="font-size: 0.9rem; line-height: 1.6; color: var(--text);"></div>
+        </div>
+
+        <!-- Items Summary -->
+        <div style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Ordered Items</h2>
+          <div id="thankyou-order-items">
+            <!-- Items rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 1.25rem; font-weight: 800; color: var(--navy); padding-top: 0.75rem;">
+          <span>Total (Demo):</span>
+          <span id="thankyou-order-total"></span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/shop.html" class="btn-primary" style="padding: 0.85rem 1.75rem;">Continue Shopping</a>
+        <a href="/orders.html" class="btn-outline" style="padding: 0.85rem 1.75rem;">View Order History</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-heading">
+          <span class="logo-text">Zorvani</span>
+          <span class="logo-accent">Wear</span>
+        </h3>
+        <p class="footer-desc">A demo fashion e-commerce site. All products, prices, and data are entirely fictional. No real payments or shipments.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Shop</h3>
+        <ul class="footer-links">
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/shop.html">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/shipping.html">Shipping Info</a></li>
+          <li><a href="/returns.html">Returns & Exchanges</a></li>
+          <li><a href="/orders.html">Order History</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Zorvani Wear (DEMO). DEMO STORE: no real products, no real payments.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/thankyou.js"></script>
+</body>
+</html>

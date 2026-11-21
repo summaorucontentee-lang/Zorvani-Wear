@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Zorvani Wear (DEMO)</title>
+  <meta name="description" content="View items in your Zorvani Wear demo shopping cart, update quantities, and proceed to simulated checkout.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <div class="demo-banner">DEMO STORE: no real products, no real payments</div>
+
+  <header class="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Zorvani Wear (DEMO) - Home">
+        <span class="logo-text">Zorvani</span>
+        <span class="logo-accent">Wear</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/cart.html" class="cart-link active" aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <h1 style="font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 1.5rem;">Your Shopping Cart</h1>
+
+    <!-- Empty Cart State -->
+    <div id="empty-cart-state" style="display: none; text-align: center; padding: 4rem 1rem; background: var(--light-gray); border-radius: var(--radius); border: 1px solid var(--border);">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1.5rem; color: var(--text-light);">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Your Cart is Empty</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+        Looks like you haven't added any demo items to your cart yet. Explore our curated fashion collection.
+      </p>
+      <a href="/shop.html" class="btn-primary" style="padding: 0.85rem 2rem;">Start Shopping</a>
+    </div>
+
+    <!-- Active Cart Content -->
+    <div id="cart-content" style="display: none; grid-template-columns: 1fr; gap: 2.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        <!-- Left: Items list -->
+        <section aria-label="Cart items">
+          <div id="cart-items-list">
+            <!-- Items rendered by JS -->
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/shop.html" class="btn-outline btn-sm">← Continue Shopping</a>
+          </div>
+        </section>
+
+        <!-- Right: Order Summary Sidebar -->
+        <aside style="background: var(--light-gray); padding: 1.75rem; border-radius: var(--radius); border: 1px solid var(--border); height: fit-content;" aria-label="Order summary">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 1.25rem;">Order Summary</h2>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.95rem;">
+            <span style="color: var(--text-light);">Items count:</span>
+            <span id="cart-item-count" style="font-weight: 600;">0 items</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.95rem;">
+            <span style="color: var(--text-light);">Subtotal:</span>
+            <span id="cart-subtotal" style="font-weight: 700;">₹0</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1.25rem; font-size: 0.95rem;">
+            <span style="color: var(--text-light);">Demo Shipping:</span>
+            <span style="color: var(--success); font-weight: 600;">FREE (Demo)</span>
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--border); margin-bottom: 1.25rem;">
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem;">
+            <span style="font-weight: 800; color: var(--navy);">Total:</span>
+            <span id="cart-total" style="font-weight: 800; color: var(--navy);">₹0</span>
+          </div>
+
+          <a href="/checkout.html" class="btn-primary btn-block" style="text-align: center; padding: 0.9rem; font-size: 1.05rem;">
+            Proceed to Checkout
+          </a>
+
+          <p style="font-size: 0.8rem; color: var(--text-light); text-align: center; margin-top: 1rem;">
+            🔒 Demo checkout with simulated order dispatch.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-heading">
+          <span class="logo-text">Zorvani</span>
+          <span class="logo-accent">Wear</span>
+        </h3>
+        <p class="footer-desc">A demo fashion e-commerce site. All products, prices, and data are entirely fictional. No real payments or shipments.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Shop</h3>
+        <ul class="footer-links">
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/shop.html">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/shipping.html">Shipping Info</a></li>
+          <li><a href="/returns.html">Returns & Exchanges</a></li>
+          <li><a href="/orders.html">Order History</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Zorvani Wear (DEMO). DEMO STORE: no real products, no real payments.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/cart-page.js"></script>
+</body>
+</html>

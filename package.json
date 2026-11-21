@@ -1,0 +1,19 @@
+{
+  "name": "zorvani-wear",
+  "version": "1.0.0",
+  "description": "Zorvani Wear (DEMO) - Fashion E-commerce Static Site",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "generate": "node scripts/generate-images.js",
+    "generate:data": "node scripts/generate-products.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "test": "node --test tests/unit/*.test.js",
+    "test:e2e": "npx playwright test --config playwright.config.js",
+    "build": "npm run generate:data && npm run generate && npm run generate:sitemap && npm test && npm run test:e2e",
+    "verify": "npm run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

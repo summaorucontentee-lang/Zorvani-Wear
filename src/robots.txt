@@ -1,0 +1,7 @@
+# Robots.txt for https://zorvaniwear.demo
+# This is a DEMO site — not a real store.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://zorvaniwear.demo/sitemap.xml

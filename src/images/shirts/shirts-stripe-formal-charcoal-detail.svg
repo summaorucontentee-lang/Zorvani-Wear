@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Stripe Formal - Charcoal - Detail View</title>
+  <desc>Detail view of Stripe Formal - Charcoal. Category: Shirts. Color: Charcoal. This is a demo product image.</desc>
+  <defs><pattern id="pat-17-detail" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#36454F"/><line x1="0" y1="10" x2="20" y2="10" stroke="#253037" stroke-width="3"/></pattern></defs>
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Close-up collar area -->
+    <path d="M200 350 L340 250 L400 300 L460 250 L600 350 L540 400 L460 360 L400 380 L340 360 L260 400 Z" fill="#868f95" stroke="#253037" stroke-width="2.5"/>
+    <!-- Collar stand -->
+    <path d="M280 370 L520 370" stroke="#2b373f" stroke-width="2"/>
+    <!-- Placket -->
+    <rect x="385" y="370" width="30" height="250" fill="#727c83" stroke="#2b373f" stroke-width="1.5"/>
+    <!-- Buttons close-up -->
+    <circle cx="400" cy="420" r="8" fill="#20292f" stroke="#1b2227" stroke-width="1"/>
+    <circle cx="400" cy="480" r="8" fill="#20292f" stroke="#1b2227" stroke-width="1"/>
+    <circle cx="400" cy="540" r="8" fill="#20292f" stroke="#1b2227" stroke-width="1"/>
+    <!-- Button holes -->
+    <line x1="396" y1="420" x2="404" y2="420" stroke="#727c83" stroke-width="1.5"/>
+    <line x1="396" y1="480" x2="404" y2="480" stroke="#727c83" stroke-width="1.5"/>
+    <line x1="396" y1="540" x2="404" y2="540" stroke="#727c83" stroke-width="1.5"/>
+    <!-- Fabric area -->
+    <rect x="200" y="370" width="185" height="250" fill="url(#pat-17-detail)" stroke="none"/>
+    <rect x="415" y="370" width="185" height="250" fill="url(#pat-17-detail)" stroke="none"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Stripe Formal - Charcoal</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Detail View • DEMO</text>
+</svg>

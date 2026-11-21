@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Checkout | Zorvani Wear (DEMO)</title>
+  <meta name="description" content="Simulated demo checkout for Zorvani Wear. Real form validation is performed, but no actual payment is collected.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <div class="demo-banner">DEMO STORE: no real products, no real payments</div>
+
+  <header class="header">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="Zorvani Wear (DEMO) - Home">
+        <span class="logo-text">Zorvani</span>
+        <span class="logo-accent">Wear</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/cart.html" class="cart-link" aria-label="Shopping cart, 0 items">
+        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container checkout-page" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Demo Checkout Notice Banner -->
+    <div class="alert alert-warning" style="background: #fff3cd; color: #856404; padding: 1rem 1.25rem; border-radius: var(--radius); border-left: 4px solid var(--warning); margin-bottom: 2rem;">
+      <h2 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">Demo checkout. No payment is collected.</h2>
+      <p style="font-size: 0.85rem; margin: 0;">
+        This is an interactive simulation. Submitting this form builds a demo order summary and opens a pre-filled WhatsApp link. No real card or UPI details are requested.
+      </p>
+    </div>
+
+    <h1 style="font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 2rem;">Demo Checkout</h1>
+
+    <div id="checkout-container" style="display: grid; grid-template-columns: 1fr; gap: 2.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem;">
+        <!-- Left: Delivery Form -->
+        <section aria-label="Delivery Information">
+          <form id="checkout-form" novalidate style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <label for="customer-name" style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy);">
+                Full Name <span style="color: var(--coral);">*</span>
+              </label>
+              <input type="text" id="customer-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required aria-required="true" autocomplete="name">
+              <div id="name-error" class="form-error" style="display: none; color: var(--danger); font-size: 0.85rem; margin-top: 0.25rem;"></div>
+            </div>
+
+            <div>
+              <label for="customer-phone" style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy);">
+                Phone Number (10-digit Indian Mobile) <span style="color: var(--coral);">*</span>
+              </label>
+              <input type="tel" id="customer-phone" name="phone" class="form-input" placeholder="e.g. 9876543210" required aria-required="true" autocomplete="tel" maxlength="15">
+              <div id="phone-error" class="form-error" style="display: none; color: var(--danger); font-size: 0.85rem; margin-top: 0.25rem;"></div>
+            </div>
+
+            <div>
+              <label for="customer-address" style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy);">
+                Delivery Address <span style="color: var(--coral);">*</span>
+              </label>
+              <textarea id="customer-address" name="address" class="form-input" rows="3" placeholder="Flat / House No., Street, Area" required aria-required="true" autocomplete="street-address"></textarea>
+              <div id="address-error" class="form-error" style="display: none; color: var(--danger); font-size: 0.85rem; margin-top: 0.25rem;"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+              <div>
+                <label for="customer-city" style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy);">
+                  City <span style="color: var(--coral);">*</span>
+                </label>
+                <input type="text" id="customer-city" name="city" class="form-input" placeholder="e.g. Mumbai" required aria-required="true" autocomplete="address-level2">
+                <div id="city-error" class="form-error" style="display: none; color: var(--danger); font-size: 0.85rem; margin-top: 0.25rem;"></div>
+              </div>
+
+              <div>
+                <label for="customer-pincode" style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy);">
+                  Pincode (6 digits) <span style="color: var(--coral);">*</span>
+                </label>
+                <input type="text" id="customer-pincode" name="pincode" class="form-input" placeholder="e.g. 400001" required aria-required="true" maxlength="6" autocomplete="postal-code">
+                <div id="pincode-error" class="form-error" style="display: none; color: var(--danger); font-size: 0.85rem; margin-top: 0.25rem;"></div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <button type="submit" id="place-order-btn" class="btn-primary btn-block" style="padding: 1rem; font-size: 1.1rem;">
+                Place Demo Order (WhatsApp)
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Right: Order Summary Sidebar -->
+        <aside style="background: var(--light-gray); padding: 1.75rem; border-radius: var(--radius); border: 1px solid var(--border); height: fit-content;" aria-label="Checkout order summary">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 1.25rem;">Order Review</h2>
+
+          <div id="checkout-items" style="margin-bottom: 1.25rem;">
+            <!-- Items rendered by JS -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.95rem;">
+            <span style="color: var(--text-light);">Subtotal:</span>
+            <span id="checkout-subtotal" style="font-weight: 700;">₹0</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1.25rem; font-size: 0.95rem;">
+            <span style="color: var(--text-light);">Delivery:</span>
+            <span style="color: var(--success); font-weight: 600;">FREE (Demo)</span>
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--border); margin-bottom: 1.25rem;">
+
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.25rem;">
+            <span style="font-weight: 800; color: var(--navy);">Total to Pay:</span>
+            <span id="checkout-total" style="font-weight: 800; color: var(--navy);">₹0</span>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--text-light); line-height: 1.4;">
+            ℹ️ On clicking <strong>Place Demo Order</strong>, this demo order will be recorded in your browser's localStorage, a WhatsApp order link will be prepared, and your cart will be reset.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-heading">
+          <span class="logo-text">Zorvani</span>
+          <span class="logo-accent">Wear</span>
+        </h3>
+        <p class="footer-desc">A demo fashion e-commerce site. All products, prices, and data are entirely fictional. No real payments or shipments.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Shop</h3>
+        <ul class="footer-links">
+          <li><a href="/shop.html?category=shirts">Shirts</a></li>
+          <li><a href="/shop.html?category=pants">Pants</a></li>
+          <li><a href="/shop.html?category=shoes">Shoes</a></li>
+          <li><a href="/shop.html">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/shipping.html">Shipping Info</a></li>
+          <li><a href="/returns.html">Returns & Exchanges</a></li>
+          <li><a href="/orders.html">Order History</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Zorvani Wear (DEMO). DEMO STORE: no real products, no real payments.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/checkout.js"></script>
+</body>
+</html>
