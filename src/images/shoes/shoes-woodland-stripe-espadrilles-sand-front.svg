@@ -1,22 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Woodland Stripe Espadrilles - Sand - Front View</title>
   <desc>Front view of Woodland Stripe Espadrilles - Sand. Category: Shoes. Color: Sand. This is a demo product image.</desc>
-  <defs><pattern id="pat-219-front" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="#C2B280"/><line x1="0" y1="10" x2="20" y2="10" stroke="#877c59" stroke-width="3"/></pattern></defs>
-  <rect width="800" height="800" fill="#F5F5F5"/>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <defs><pattern id="pat-219-front" patternUnits="userSpaceOnUse" width="28" height="28">
+      <rect width="28" height="28" fill="#B0A178"/>
+      <line x1="0" y1="14" x2="28" y2="14" stroke="#84785a" stroke-width="4"/>
+      <line x1="0" y1="7" x2="28" y2="7" stroke="#bfb393" stroke-width="1.5" opacity="0.6"/>
+    </pattern></defs>
   
-    <!-- Shoe top-front view -->
-    <ellipse cx="400" cy="500" rx="180" ry="60" fill="#aea073" stroke="#877c59" stroke-width="2"/>
-    <!-- Shoe upper -->
-    <path d="M220 500 L240 350 L350 300 L400 290 L450 300 L560 350 L580 500 Z" fill="url(#pat-219-front)" stroke="#877c59" stroke-width="2"/>
-    <!-- Toe box -->
-    <ellipse cx="400" cy="340" rx="80" ry="30" fill="#c8b98c" stroke="#9b8e66" stroke-width="1.5"/>
-    <!-- Lacing area -->
-    <line x1="380" y1="350" x2="420" y2="350" stroke="#746a4c" stroke-width="2"/>
-    <line x1="375" y1="370" x2="425" y2="370" stroke="#746a4c" stroke-width="2"/>
-    <line x1="370" y1="390" x2="430" y2="390" stroke="#746a4c" stroke-width="2"/>
-    <line x1="365" y1="410" x2="435" y2="410" stroke="#746a4c" stroke-width="2"/>
-    <!-- Tongue -->
-    <path d="M375 350 L400 310 L425 350" fill="#cec199" stroke="#9b8e66" stroke-width="1"/>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Woodland Stripe Espadrilles - Sand</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Front View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <ellipse cx="400" cy="620" rx="160" ry="24" fill="#000000" opacity="0.16" filter="url(#shadow-filter)"/>
+    <!-- Top-Down 3D Perspective -->
+    <!-- Outsole Edge -->
+    <path d="M270 560 Q240 400 290 280 Q400 220 510 280 Q560 400 530 560 Q400 620 270 560 Z" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="3"/>
+    <!-- Upper Body -->
+    <path d="M285 540 Q260 400 305 300 Q400 250 495 300 Q540 400 515 540 Q400 595 285 540 Z" fill="url(#pat-219-front)" stroke="#696048" stroke-width="2.5"/>
+    <!-- Perforated Toe Vamp -->
+    <path d="M320 320 Q400 280 480 320 Q440 390 360 390 Z" fill="#9e906c" stroke="#696048" stroke-width="1.5"/>
+    <circle cx="400" cy="310" r="2.5" fill="#696048"/><circle cx="385" cy="330" r="2.5" fill="#696048"/><circle cx="415" cy="330" r="2.5" fill="#696048"/><circle cx="370" cy="350" r="2.5" fill="#696048"/><circle cx="400" cy="350" r="2.5" fill="#696048"/><circle cx="430" cy="350" r="2.5" fill="#696048"/>
+    <!-- Lacing Array -->
+    
+      <rect x="350" y="390" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="425" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="460" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="495" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+    <!-- Tongue Badge -->
+    <rect x="365" y="515" width="70" height="30" rx="4" fill="#1A202C"/>
+    <text x="400" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#E05A47" font-family="sans-serif">ZORVANI</text>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">WOODLAND STRIPE ESPADRILLES - SAND</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">FRONT VIEW • DEMO STORE</text>
 </svg>

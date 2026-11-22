@@ -1,25 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Skechers Slip-On Mules - Olive - Side View</title>
   <desc>Side view of Skechers Slip-On Mules - Olive. Category: Shoes. Color: Olive. This is a demo product image.</desc>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
   
-  <rect width="800" height="800" fill="#F5F5F5"/>
   
-    <!-- Sole -->
-    <path d="M150 520 L650 520 L660 540 L640 550 L160 550 L140 540 Z" fill="#4c4c00" stroke="#404000" stroke-width="2"/>
-    <!-- Midsole -->
-    <path d="M160 510 L640 510 L650 520 L150 520 Z" fill="#EEEEEE" stroke="#595900" stroke-width="1"/>
-    <!-- Shoe upper -->
-    <path d="M180 510 L200 350 L280 300 L380 280 L500 290 L580 330 L620 420 L630 510 Z" fill="#808000" stroke="#595900" stroke-width="2"/>
-    <!-- Toe cap -->
-    <path d="M180 510 L200 420 L280 380 L300 510" fill="#8c8c19" stroke="#666600" stroke-width="1.5"/>
-    <!-- Collar/opening -->
-    <path d="M480 310 L540 340 L580 380" fill="none" stroke="#666600" stroke-width="2"/>
-    <!-- Laces -->
-    <line x1="350" y1="310" x2="420" y2="300" stroke="#4c4c00" stroke-width="2"/>
-    <line x1="340" y1="330" x2="410" y2="315" stroke="#4c4c00" stroke-width="2"/>
-    <line x1="330" y1="350" x2="400" y2="332" stroke="#4c4c00" stroke-width="2"/>
-    <!-- Logo -->
-    <circle cx="460" cy="420" r="15" fill="#666600" opacity="0.5"/>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Skechers Slip-On Mules - Olive</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Side View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <!-- Contact Ground Shadow -->
+    <ellipse cx="400" cy="570" rx="260" ry="16" fill="#000000" opacity="0.18" filter="url(#shadow-filter)"/>
+    
+    <!-- Rubber Outsole Lugs -->
+    <path d="M150 540 L650 540 L645 558 Q400 565 155 558 Z" fill="#2D3748" stroke="#1A202C" stroke-width="2"/>
+    
+    <!-- Sculpted Cushioned Midsole (Sneaker / Comfort Sole) -->
+    <path d="M142 510 Q280 525 430 520 Q560 528 658 510 L650 540 L150 540 Z" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1.8"/>
+    <!-- Air / Gel Cushion Accent Window -->
+    <rect x="480" y="520" width="70" height="14" rx="7" fill="#E2E8F0" stroke="#A0AEC0" stroke-width="1"/>
+    <line x1="500" y1="520" x2="500" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    <line x1="515" y1="520" x2="515" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    <line x1="530" y1="520" x2="530" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    
+    <!-- Upper Body Contour -->
+    <path d="M145 510 Q160 410 240 370 Q340 340 430 330 Q530 310 590 350 Q635 390 655 510 Z" fill="#5E6B3C" stroke="#384024" stroke-width="2.5"/>
+    
+    <!-- Suede / Leather Toe Mudguard -->
+    <path d="M145 510 Q160 410 240 370 Q215 470 230 512 Z" fill="#525e34" stroke="#384024" stroke-width="2"/>
+    
+    <!-- Ankle Collar Padding & Opening -->
+    <path d="M490 325 Q545 300 590 350 Q560 380 490 340 Z" fill="#2D3748"/>
+    <path d="M495 320 Q550 305 585 345" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6"/>
+    
+    <!-- Eyestay & Lacing System -->
+    <path d="M290 360 L480 330 L465 375 L300 405 Z" fill="#4d5731" stroke="#384024" stroke-width="1.8"/>
+    <!-- Criss-Cross Laces -->
+    
+      <line x1="315" y1="385" x2="335" y2="350" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="315" y1="385" x2="335" y2="350" stroke="#A0AEC0" stroke-width="1.5" stroke-linecap="round"/>
+    
+      <line x1="350" y1="375" x2="370" y2="345" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="350" y1="375" x2="370" y2="345" stroke="#A0AEC0" stroke-width="1.5" stroke-linecap="round"/>
+    
+      <line x1="385" y1="365" x2="405" y2="340" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="385" y1="365" x2="405" y2="340" stroke="#A0AEC0" stroke-width="1.5" stroke-linecap="round"/>
+    
+      <line x1="420" y1="355" x2="440" y2="335" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="420" y1="355" x2="440" y2="335" stroke="#A0AEC0" stroke-width="1.5" stroke-linecap="round"/>
+    
+    
+    <!-- Aerodynamic Side Swoosh / Brand Stripe Wave -->
+    <path d="M230 450 Q380 470 540 370 Q420 500 240 475 Z" fill="#E05A47" opacity="0.9" stroke="#384024" stroke-width="1.5"/>
+    
+    <!-- Heel Counter Support Overlay -->
+    <path d="M570 380 Q620 400 655 510 L585 510 Q560 430 570 380 Z" fill="#49532e" stroke="#384024" stroke-width="1.5"/>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">SKECHERS SLIP-ON MULES - OLIVE</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">SIDE VIEW • DEMO STORE</text>
 </svg>

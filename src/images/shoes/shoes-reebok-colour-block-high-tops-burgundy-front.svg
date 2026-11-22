@@ -1,22 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Reebok Colour Block High Tops - Burgundy - Front View</title>
   <desc>Front view of Reebok Colour Block High Tops - Burgundy. Category: Shoes. Color: Burgundy. This is a demo product image.</desc>
-  <defs><linearGradient id="pat-215-front" x1="0" y1="0" x2="0" y2="1"><stop offset="50%" stop-color="#800020"/><stop offset="50%" stop-color="#530014"/></linearGradient></defs>
-  <rect width="800" height="800" fill="#F5F5F5"/>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <defs><linearGradient id="pat-215-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#813948"/>
+      <stop offset="48%" stop-color="#6B1728"/>
+      <stop offset="52%" stop-color="#4a101c"/>
+      <stop offset="100%" stop-color="#3a0c16"/>
+    </linearGradient></defs>
   
-    <!-- Shoe top-front view -->
-    <ellipse cx="400" cy="500" rx="180" ry="60" fill="#73001c" stroke="#590016" stroke-width="2"/>
-    <!-- Shoe upper -->
-    <path d="M220 500 L240 350 L350 300 L400 290 L450 300 L560 350 L580 500 Z" fill="url(#pat-215-front)" stroke="#590016" stroke-width="2"/>
-    <!-- Toe box -->
-    <ellipse cx="400" cy="340" rx="80" ry="30" fill="#8c1936" stroke="#660019" stroke-width="1.5"/>
-    <!-- Lacing area -->
-    <line x1="380" y1="350" x2="420" y2="350" stroke="#4c0013" stroke-width="2"/>
-    <line x1="375" y1="370" x2="425" y2="370" stroke="#4c0013" stroke-width="2"/>
-    <line x1="370" y1="390" x2="430" y2="390" stroke="#4c0013" stroke-width="2"/>
-    <line x1="365" y1="410" x2="435" y2="410" stroke="#4c0013" stroke-width="2"/>
-    <!-- Tongue -->
-    <path d="M375 350 L400 310 L425 350" fill="#99334c" stroke="#660019" stroke-width="1"/>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Reebok Colour Block High Tops - Burgundy</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Front View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <ellipse cx="400" cy="620" rx="160" ry="24" fill="#000000" opacity="0.16" filter="url(#shadow-filter)"/>
+    <!-- Top-Down 3D Perspective -->
+    <!-- Outsole Edge -->
+    <path d="M270 560 Q240 400 290 280 Q400 220 510 280 Q560 400 530 560 Q400 620 270 560 Z" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="3"/>
+    <!-- Upper Body -->
+    <path d="M285 540 Q260 400 305 300 Q400 250 495 300 Q540 400 515 540 Q400 595 285 540 Z" fill="url(#pat-215-front)" stroke="#400d18" stroke-width="2.5"/>
+    <!-- Perforated Toe Vamp -->
+    <path d="M320 320 Q400 280 480 320 Q440 390 360 390 Z" fill="#601424" stroke="#400d18" stroke-width="1.5"/>
+    <circle cx="400" cy="310" r="2.5" fill="#400d18"/><circle cx="385" cy="330" r="2.5" fill="#400d18"/><circle cx="415" cy="330" r="2.5" fill="#400d18"/><circle cx="370" cy="350" r="2.5" fill="#400d18"/><circle cx="400" cy="350" r="2.5" fill="#400d18"/><circle cx="430" cy="350" r="2.5" fill="#400d18"/>
+    <!-- Lacing Array -->
+    
+      <rect x="350" y="390" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="425" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="460" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+      <rect x="350" y="495" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    
+    <!-- Tongue Badge -->
+    <rect x="365" y="515" width="70" height="30" rx="4" fill="#1A202C"/>
+    <text x="400" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#E05A47" font-family="sans-serif">ZORVANI</text>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">REEBOK COLOUR BLOCK HIGH TOPS - BURGUNDY</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">FRONT VIEW • DEMO STORE</text>
 </svg>

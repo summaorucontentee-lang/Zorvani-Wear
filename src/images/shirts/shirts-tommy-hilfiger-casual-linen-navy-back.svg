@@ -1,20 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Tommy Hilfiger Casual Linen - Navy - Back View</title>
   <desc>Back view of Tommy Hilfiger Casual Linen - Navy. Category: Shirts. Color: Navy. This is a demo product image.</desc>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
   
-  <rect width="800" height="800" fill="#F5F5F5"/>
   
-    <!-- Shirt body back -->
-    <path d="M300 230 L280 250 L220 240 L180 280 L180 600 L620 600 L620 280 L580 240 L520 250 L500 230 L400 220 Z" fill="#1B2A4A" stroke="#121d33" stroke-width="2"/>
-    <!-- Back yoke -->
-    <path d="M220 300 L580 300" stroke="#15213b" stroke-width="1.5" stroke-dasharray="none"/>
-    <!-- Left sleeve -->
-    <path d="M180 280 L100 320 L120 420 L180 380 Z" fill="#1B2A4A" stroke="#121d33" stroke-width="2"/>
-    <!-- Right sleeve -->
-    <path d="M620 280 L700 320 L680 420 L620 380 Z" fill="#1B2A4A" stroke="#121d33" stroke-width="2"/>
-    <!-- Back label -->
-    <rect x="370" y="240" width="60" height="20" rx="2" fill="#8d94a4" stroke="#15213b" stroke-width="1"/>
-    <text x="400" y="254" text-anchor="middle" font-size="8" fill="#10192c" font-family="sans-serif">ZW</text>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Tommy Hilfiger Casual Linen - Navy</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Back View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <ellipse cx="400" cy="640" rx="210" ry="22" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <path d="M290 190 Q220 220 180 260 L195 590 Q400 625 605 590 L620 260 Q580 220 510 190 Q450 175 400 175 Q350 175 290 190 Z" fill="#1B2A4A" stroke="#111b30" stroke-width="2.5"/>
+    <!-- Back Yoke -->
+    <path d="M185 270 Q400 295 615 270" stroke="#111b30" stroke-width="2.5" fill="none"/>
+    <line x1="185" y1="274" x2="615" y2="274" stroke="#111b30" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <!-- Box Pleat -->
+    <line x1="400" y1="290" x2="400" y2="570" stroke="#111b30" stroke-width="2" opacity="0.5"/>
+    <!-- Sleeves -->
+    <path d="M190 250 L110 330 Q125 410 155 430 L195 385 Z" fill="#1B2A4A" stroke="#111b30" stroke-width="2"/>
+    <path d="M610 250 L690 330 Q675 410 645 430 L605 385 Z" fill="#1B2A4A" stroke="#111b30" stroke-width="2"/>
+    <!-- Collar Band Back -->
+    <path d="M320 190 Q400 205 480 190" stroke="#111b30" stroke-width="4" fill="none"/>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">TOMMY HILFIGER CASUAL LINEN - NAVY</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">BACK VIEW • DEMO STORE</text>
 </svg>

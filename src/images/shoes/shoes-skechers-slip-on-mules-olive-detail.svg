@@ -1,25 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Skechers Slip-On Mules - Olive - Detail View</title>
   <desc>Detail view of Skechers Slip-On Mules - Olive. Category: Shoes. Color: Olive. This is a demo product image.</desc>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
   
-  <rect width="800" height="800" fill="#F5F5F5"/>
   
-    <!-- Sole pattern close-up -->
-    <rect x="200" y="250" width="400" height="300" rx="20" fill="#4c4c00" stroke="#404000" stroke-width="2.5"/>
-    <!-- Tread pattern -->
-    <line x1="230" y1="290" x2="570" y2="290" stroke="#595900" stroke-width="3"/>
-    <line x1="230" y1="330" x2="570" y2="330" stroke="#595900" stroke-width="3"/>
-    <line x1="230" y1="370" x2="570" y2="370" stroke="#595900" stroke-width="3"/>
-    <line x1="230" y1="410" x2="570" y2="410" stroke="#595900" stroke-width="3"/>
-    <line x1="230" y1="450" x2="570" y2="450" stroke="#595900" stroke-width="3"/>
-    <line x1="230" y1="490" x2="570" y2="490" stroke="#595900" stroke-width="3"/>
-    <!-- Cross treads -->
-    <line x1="300" y1="260" x2="300" y2="540" stroke="#595900" stroke-width="2"/>
-    <line x1="400" y1="260" x2="400" y2="540" stroke="#595900" stroke-width="2"/>
-    <line x1="500" y1="260" x2="500" y2="540" stroke="#595900" stroke-width="2"/>
-    <!-- Brand circle -->
-    <circle cx="400" cy="400" r="40" fill="#535300" stroke="#404000" stroke-width="2"/>
-    <text x="400" y="405" text-anchor="middle" font-size="14" fill="#a6a64c" font-family="sans-serif" font-weight="bold">ZW</text>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Skechers Slip-On Mules - Olive</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Detail View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <!-- High-Traction Outsole Tread Macro -->
+    <rect x="180" y="180" width="440" height="440" rx="24" fill="#1A202C" stroke="#2D3748" stroke-width="4"/>
+    <!-- Waffle & Hex Grip Pattern -->
+    
+      <line x1="210" y1="220" x2="590" y2="220" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+      <line x1="210" y1="280" x2="590" y2="280" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+      <line x1="210" y1="340" x2="590" y2="340" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+      <line x1="210" y1="400" x2="590" y2="400" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+      <line x1="210" y1="460" x2="590" y2="460" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+      <line x1="210" y1="520" x2="590" y2="520" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    
+    <!-- Center Pivot Circle / Tech Branding -->
+    <circle cx="400" cy="400" r="64" fill="#E05A47" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="400" cy="400" r="48" fill="#1A202C" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="400" y="398" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF" font-family="sans-serif">GRIP-MAX</text>
+    <text x="400" y="415" text-anchor="middle" font-size="9" fill="#A0AEC0" font-family="sans-serif">ALL-WEATHER</text>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">SKECHERS SLIP-ON MULES - OLIVE</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">DETAIL VIEW • DEMO STORE</text>
 </svg>

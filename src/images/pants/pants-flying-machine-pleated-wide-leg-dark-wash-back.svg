@@ -1,24 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>Flying Machine Pleated Wide Leg - Dark Wash - Back View</title>
   <desc>Back view of Flying Machine Pleated Wide Leg - Dark Wash. Category: Pants. Color: Dark Wash. This is a demo product image.</desc>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
   
-  <rect width="800" height="800" fill="#F5F5F5"/>
   
-    <!-- Waistband back -->
-    <rect x="220" y="180" width="360" height="50" rx="5" fill="#273760" stroke="#1e2b4a" stroke-width="2"/>
-    <!-- Belt loops -->
-    <rect x="260" y="175" width="12" height="60" rx="2" fill="#233155"/>
-    <rect x="530" y="175" width="12" height="60" rx="2" fill="#233155"/>
-    <!-- Left leg -->
-    <path d="M220 230 L240 650 L380 650 L400 400 Z" fill="#2C3E6B" stroke="#1e2b4a" stroke-width="2"/>
-    <!-- Right leg -->
-    <path d="M400 400 L420 650 L560 650 L580 230 Z" fill="#2C3E6B" stroke="#1e2b4a" stroke-width="2"/>
-    <!-- Back pockets -->
-    <rect x="270" y="280" width="90" height="80" rx="5" fill="none" stroke="#212e50" stroke-width="1.5"/>
-    <rect x="440" y="280" width="90" height="80" rx="5" fill="none" stroke="#212e50" stroke-width="1.5"/>
-    <!-- Pocket stitching -->
-    <path d="M280 320 L350 320" stroke="#1e2b4a" stroke-width="1" stroke-dasharray="3,2"/>
-    <path d="M450 320 L520 320" stroke="#1e2b4a" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Flying Machine Pleated Wide Leg - Dark Wash</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Back View • DEMO</text>
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
+  
+    <ellipse cx="400" cy="660" rx="190" ry="20" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <path d="M240 230 L260 645 L385 645 L395 380 L350 230 Z" fill="#1D2A44" stroke="#111928" stroke-width="2.5"/>
+    <path d="M450 230 L405 380 L415 645 L540 645 L560 230 Z" fill="#1D2A44" stroke="#111928" stroke-width="2.5"/>
+    <path d="M350 230 L395 380 L405 380 L450 230 Z" fill="#1D2A44"/>
+    <rect x="235" y="180" width="330" height="52" rx="4" fill="#1a253d" stroke="#111928" stroke-width="2.5"/>
+    <!-- Leather Brand Patch -->
+    <rect x="475" y="184" width="70" height="44" rx="3" fill="#8B4513" stroke="#5C2C0A" stroke-width="1.5"/>
+    <text x="510" y="210" text-anchor="middle" font-size="8" font-weight="bold" fill="#F7FAFC" font-family="sans-serif">ZORVANI</text>
+    <!-- Back Yoke V-Seam -->
+    <path d="M235 250 L400 280 L565 250" stroke="#111928" stroke-width="2" fill="none"/>
+    <!-- Back Pockets -->
+    <path d="M270 290 L345 290 L345 365 L307 385 L270 365 Z" fill="#1b2740" stroke="#111928" stroke-width="2"/>
+    <path d="M275 325 Q307 350 340 325" stroke="#D69E2E" stroke-width="1.5" fill="none"/>
+    <path d="M455 290 L530 290 L530 365 L492 385 L455 365 Z" fill="#1b2740" stroke="#111928" stroke-width="2"/>
+    <path d="M460 325 Q492 350 525 325" stroke="#D69E2E" stroke-width="1.5" fill="none"/>
+  
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">FLYING MACHINE PLEATED WIDE LEG - DARK WASH</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">BACK VIEW • DEMO STORE</text>
 </svg>

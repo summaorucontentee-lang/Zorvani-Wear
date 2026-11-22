@@ -1,5 +1,5 @@
-// Zorvani Wear (DEMO) - SVG Image Generator
-// Generates original SVG product images for every product.
+// Zorvani Wear (DEMO) - Enhanced Fashion SVG Image Generator
+// Generates realistic, beautifully detailed vector apparel & footwear images.
 // Run: node scripts/generate-images.js
 
 import fs from 'fs';
@@ -15,17 +15,17 @@ const VIEWS = ['front', 'back', 'detail', 'side'];
 
 // ─── Color name → hex mapping ────────────────────────────────
 const COLOR_MAP = {
-  'white': '#FFFFFF', 'sky blue': '#87CEEB', 'navy': '#1B2A4A', 'sage green': '#8FAE7E',
-  'blush pink': '#F4A6B8', 'charcoal': '#36454F', 'lavender': '#B8A9D0', 'mustard': '#D4A843',
-  'ivory': '#FFFFF0', 'burgundy': '#800020', 'olive': '#808000', 'coral': '#FF6B6B',
-  'khaki': '#C3B091', 'black': '#222222', 'beige': '#D4C5A9', 'stone': '#928E85',
-  'dark wash': '#2C3E6B', 'light wash': '#8CAACC', 'forest green': '#228B22', 'slate blue': '#6A7B9B',
-  'tan': '#D2B48C', 'grey': '#888888', 'camel': '#C19A6B', 'sand': '#C2B280',
-  'rust': '#B7410E', 'cognac': '#9A463D',
+  'white': '#F4F5F7', 'sky blue': '#7EB8E2', 'navy': '#1B2A4A', 'sage green': '#7F9E7B',
+  'blush pink': '#E8A3B2', 'charcoal': '#2C343D', 'lavender': '#9F90C2', 'mustard': '#D69E2E',
+  'ivory': '#F7F3E8', 'burgundy': '#6B1728', 'olive': '#5E6B3C', 'coral': '#E05A47',
+  'khaki': '#A89472', 'black': '#1E2024', 'beige': '#C9BC9C', 'stone': '#827E77',
+  'dark wash': '#1D2A44', 'light wash': '#6F8FAF', 'forest green': '#1C4A27', 'slate blue': '#4A5B78',
+  'tan': '#AD8350', 'grey': '#6E737A', 'camel': '#A67C48', 'sand': '#B0A178',
+  'rust': '#9E381A', 'cognac': '#803823',
 };
 
 function getHexColor(name) {
-  return COLOR_MAP[name.toLowerCase()] || '#888888';
+  return COLOR_MAP[name.toLowerCase()] || '#4A5568';
 }
 
 function darken(hex, amount = 0.2) {
@@ -44,239 +44,378 @@ function lighten(hex, amount = 0.3) {
   return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
 }
 
-// ─── Pattern generators ──────────────────────────────────────
+// ─── Pattern & Texture definitions ────────────────────────────
 function getPatternDefs(name, color, id) {
   const lowerName = name.toLowerCase();
+  let pattern = '';
   if (lowerName.includes('stripe')) {
-    return `<defs><pattern id="pat-${id}" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="${color}"/><line x1="0" y1="10" x2="20" y2="10" stroke="${darken(color, 0.3)}" stroke-width="3"/></pattern></defs>`;
+    pattern = `<pattern id="pat-${id}" patternUnits="userSpaceOnUse" width="28" height="28">
+      <rect width="28" height="28" fill="${color}"/>
+      <line x1="0" y1="14" x2="28" y2="14" stroke="${darken(color, 0.25)}" stroke-width="4"/>
+      <line x1="0" y1="7" x2="28" y2="7" stroke="${lighten(color, 0.2)}" stroke-width="1.5" opacity="0.6"/>
+    </pattern>`;
+  } else if (lowerName.includes('check')) {
+    pattern = `<pattern id="pat-${id}" patternUnits="userSpaceOnUse" width="36" height="36">
+      <rect width="36" height="36" fill="${color}"/>
+      <rect width="18" height="18" fill="${darken(color, 0.18)}"/>
+      <rect x="18" y="18" width="18" height="18" fill="${darken(color, 0.18)}"/>
+      <line x1="0" y1="18" x2="36" y2="18" stroke="${darken(color, 0.35)}" stroke-width="1.5"/>
+      <line x1="18" y1="0" x2="18" y2="36" stroke="${darken(color, 0.35)}" stroke-width="1.5"/>
+    </pattern>`;
+  } else if (lowerName.includes('color block') || lowerName.includes('colour block')) {
+    pattern = `<linearGradient id="pat-${id}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${lighten(color, 0.15)}"/>
+      <stop offset="48%" stop-color="${color}"/>
+      <stop offset="52%" stop-color="${darken(color, 0.3)}"/>
+      <stop offset="100%" stop-color="${darken(color, 0.45)}"/>
+    </linearGradient>`;
   }
-  if (lowerName.includes('check')) {
-    return `<defs><pattern id="pat-${id}" patternUnits="userSpaceOnUse" width="24" height="24"><rect width="24" height="24" fill="${color}"/><rect width="12" height="12" fill="${darken(color, 0.15)}"/><rect x="12" y="12" width="12" height="12" fill="${darken(color, 0.15)}"/></pattern></defs>`;
-  }
-  if (lowerName.includes('color block') || lowerName.includes('colour block')) {
-    return `<defs><linearGradient id="pat-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="50%" stop-color="${color}"/><stop offset="50%" stop-color="${darken(color, 0.35)}"/></linearGradient></defs>`;
-  }
-  return '';
+  return pattern ? `<defs>${pattern}</defs>` : '';
 }
 
 function getFill(name, color, id) {
   const lowerName = name.toLowerCase();
-  if (lowerName.includes('stripe') || lowerName.includes('check')) {
-    return `url(#pat-${id})`;
-  }
-  if (lowerName.includes('color block') || lowerName.includes('colour block')) {
+  if (lowerName.includes('stripe') || lowerName.includes('check') || lowerName.includes('color block') || lowerName.includes('colour block')) {
     return `url(#pat-${id})`;
   }
   return color;
 }
 
-// ─── SVG builders per category and view ──────────────────────
+// ─── SHIRT ILLUSTRATIONS (REALISTIC CLOTHING) ────────────────
 
 function shirtFront(color, fill, name, id) {
+  const dark = darken(color, 0.35);
+  const light = lighten(color, 0.3);
+  const mid = darken(color, 0.15);
   return `
-    <!-- Shirt body -->
-    <path d="M300 220 L280 250 L220 240 L180 280 L180 600 L620 600 L620 280 L580 240 L520 250 L500 220 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Collar -->
-    <path d="M300 220 L360 190 L400 210 L440 190 L500 220 L460 260 L440 240 L400 250 L360 240 L340 260 Z" fill="${lighten(color, 0.4)}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Left sleeve -->
-    <path d="M180 280 L100 320 L120 420 L180 380 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Right sleeve -->
-    <path d="M620 280 L700 320 L680 420 L620 380 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Buttons -->
-    <circle cx="400" cy="320" r="5" fill="${darken(color, 0.4)}"/>
-    <circle cx="400" cy="380" r="5" fill="${darken(color, 0.4)}"/>
-    <circle cx="400" cy="440" r="5" fill="${darken(color, 0.4)}"/>
-    <circle cx="400" cy="500" r="5" fill="${darken(color, 0.4)}"/>`;
+    <!-- Pedestal Shadow -->
+    <ellipse cx="400" cy="640" rx="210" ry="22" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    
+    <!-- Torso Body -->
+    <path d="M290 190 Q220 220 180 260 L195 590 Q400 625 605 590 L620 260 Q580 220 510 190 Q450 220 400 220 Q350 220 290 190 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    
+    <!-- Inner Neck Arch & Contrast Band -->
+    <path d="M330 195 Q400 240 470 195 Q445 160 400 160 Q355 160 330 195 Z" fill="${darken(color, 0.4)}"/>
+    <rect x="375" y="172" width="50" height="22" rx="3" fill="#FFFFFF" opacity="0.85"/>
+    <text x="400" y="186" text-anchor="middle" font-size="9" font-weight="bold" fill="#1A202C" font-family="sans-serif">ZORVANI</text>
+    
+    <!-- Left Sleeve -->
+    <path d="M190 250 L110 330 Q125 410 155 430 L195 385 Z" fill="${fill}" stroke="${dark}" stroke-width="2"/>
+    <path d="M125 410 L155 430" stroke="${dark}" stroke-width="3"/> <!-- Cuff -->
+    
+    <!-- Right Sleeve -->
+    <path d="M610 250 L690 330 Q675 410 645 430 L605 385 Z" fill="${fill}" stroke="${dark}" stroke-width="2"/>
+    <path d="M675 410 L645 430" stroke="${dark}" stroke-width="3"/> <!-- Cuff -->
+    
+    <!-- Center Front Placket -->
+    <path d="M382 210 L382 605 L418 605 L418 210 Z" fill="${lighten(color, 0.1)}" stroke="${dark}" stroke-width="1.8"/>
+    <line x1="388" y1="210" x2="388" y2="605" stroke="${dark}" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <line x1="412" y1="210" x2="412" y2="605" stroke="${dark}" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    
+    <!-- Left Collar Leaf -->
+    <path d="M330 190 Q380 230 396 295 L350 260 Q315 220 330 190 Z" fill="${light}" stroke="${dark}" stroke-width="2.2"/>
+    <!-- Right Collar Leaf -->
+    <path d="M470 190 Q420 230 404 295 L450 260 Q485 220 470 190 Z" fill="${light}" stroke="${dark}" stroke-width="2.2"/>
+    
+    <!-- Chest Pocket Left -->
+    <path d="M235 320 L310 320 L310 395 L272 415 L235 395 Z" fill="${fill}" stroke="${dark}" stroke-width="1.8"/>
+    <line x1="235" y1="335" x2="310" y2="335" stroke="${dark}" stroke-width="1.2" stroke-dasharray="2,2"/>
+    
+    <!-- Buttons (Mother of Pearl style) -->
+    ${[230, 290, 350, 410, 470, 535].map(y => `
+      <circle cx="400" cy="${y}" r="6.5" fill="#FFFFFF" stroke="${mid}" stroke-width="1.5"/>
+      <circle cx="400" cy="${y}" r="3.5" fill="#E2E8F0"/>
+      <circle cx="398.5" cy="${y - 1.5}" r="1" fill="#4A5568"/>
+      <circle cx="401.5" cy="${y - 1.5}" r="1" fill="#4A5568"/>
+      <circle cx="398.5" cy="${y + 1.5}" r="1" fill="#4A5568"/>
+      <circle cx="401.5" cy="${y + 1.5}" r="1" fill="#4A5568"/>
+    `).join('')}
+    
+    <!-- Natural Fabric Folds -->
+    <path d="M250 480 Q290 510 320 490" stroke="${dark}" stroke-width="1.5" fill="none" opacity="0.35"/>
+    <path d="M480 490 Q510 510 550 480" stroke="${dark}" stroke-width="1.5" fill="none" opacity="0.35"/>
+  `;
 }
 
 function shirtBack(color, fill, name, id) {
+  const dark = darken(color, 0.35);
   return `
-    <!-- Shirt body back -->
-    <path d="M300 230 L280 250 L220 240 L180 280 L180 600 L620 600 L620 280 L580 240 L520 250 L500 230 L400 220 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Back yoke -->
-    <path d="M220 300 L580 300" stroke="${darken(color, 0.2)}" stroke-width="1.5" stroke-dasharray="none"/>
-    <!-- Left sleeve -->
-    <path d="M180 280 L100 320 L120 420 L180 380 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Right sleeve -->
-    <path d="M620 280 L700 320 L680 420 L620 380 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Back label -->
-    <rect x="370" y="240" width="60" height="20" rx="2" fill="${lighten(color, 0.5)}" stroke="${darken(color, 0.2)}" stroke-width="1"/>
-    <text x="400" y="254" text-anchor="middle" font-size="8" fill="${darken(color, 0.4)}" font-family="sans-serif">ZW</text>`;
+    <ellipse cx="400" cy="640" rx="210" ry="22" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <path d="M290 190 Q220 220 180 260 L195 590 Q400 625 605 590 L620 260 Q580 220 510 190 Q450 175 400 175 Q350 175 290 190 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Back Yoke -->
+    <path d="M185 270 Q400 295 615 270" stroke="${dark}" stroke-width="2.5" fill="none"/>
+    <line x1="185" y1="274" x2="615" y2="274" stroke="${dark}" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <!-- Box Pleat -->
+    <line x1="400" y1="290" x2="400" y2="570" stroke="${dark}" stroke-width="2" opacity="0.5"/>
+    <!-- Sleeves -->
+    <path d="M190 250 L110 330 Q125 410 155 430 L195 385 Z" fill="${fill}" stroke="${dark}" stroke-width="2"/>
+    <path d="M610 250 L690 330 Q675 410 645 430 L605 385 Z" fill="${fill}" stroke="${dark}" stroke-width="2"/>
+    <!-- Collar Band Back -->
+    <path d="M320 190 Q400 205 480 190" stroke="${dark}" stroke-width="4" fill="none"/>
+  `;
 }
 
 function shirtDetail(color, fill, name, id) {
+  const dark = darken(color, 0.35);
+  const light = lighten(color, 0.3);
   return `
-    <!-- Close-up collar area -->
-    <path d="M200 350 L340 250 L400 300 L460 250 L600 350 L540 400 L460 360 L400 380 L340 360 L260 400 Z" fill="${lighten(color, 0.4)}" stroke="${darken(color, 0.3)}" stroke-width="2.5"/>
-    <!-- Collar stand -->
-    <path d="M280 370 L520 370" stroke="${darken(color, 0.2)}" stroke-width="2"/>
-    <!-- Placket -->
-    <rect x="385" y="370" width="30" height="250" fill="${lighten(color, 0.3)}" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <!-- Buttons close-up -->
-    <circle cx="400" cy="420" r="8" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="1"/>
-    <circle cx="400" cy="480" r="8" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="1"/>
-    <circle cx="400" cy="540" r="8" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="1"/>
-    <!-- Button holes -->
-    <line x1="396" y1="420" x2="404" y2="420" stroke="${lighten(color, 0.3)}" stroke-width="1.5"/>
-    <line x1="396" y1="480" x2="404" y2="480" stroke="${lighten(color, 0.3)}" stroke-width="1.5"/>
-    <line x1="396" y1="540" x2="404" y2="540" stroke="${lighten(color, 0.3)}" stroke-width="1.5"/>
-    <!-- Fabric area -->
-    <rect x="200" y="370" width="185" height="250" fill="${fill}" stroke="none"/>
-    <rect x="415" y="370" width="185" height="250" fill="${fill}" stroke="none"/>`;
+    <!-- Macro View of Collar & Placket -->
+    <rect x="160" y="160" width="480" height="480" rx="24" fill="${fill}" stroke="${dark}" stroke-width="3"/>
+    <!-- Collar Spread Macro -->
+    <path d="M210 220 L370 380 L395 320 L270 200 Z" fill="${light}" stroke="${dark}" stroke-width="3"/>
+    <path d="M590 220 L430 380 L405 320 L530 200 Z" fill="${light}" stroke="${dark}" stroke-width="3"/>
+    <!-- Placket Macro -->
+    <rect x="365" y="240" width="70" height="400" fill="${lighten(color, 0.15)}" stroke="${dark}" stroke-width="2.5"/>
+    <line x1="375" y1="240" x2="375" y2="640" stroke="${dark}" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <line x1="425" y1="240" x2="425" y2="640" stroke="${dark}" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <!-- Button Close-Up -->
+    <circle cx="400" cy="400" r="22" fill="#FFFFFF" stroke="${dark}" stroke-width="3"/>
+    <circle cx="400" cy="400" r="14" fill="#EDF2F7" stroke="${dark}" stroke-width="1"/>
+    <circle cx="394" cy="394" r="2.5" fill="#1A202C"/>
+    <circle cx="406" cy="394" r="2.5" fill="#1A202C"/>
+    <circle cx="394" cy="406" r="2.5" fill="#1A202C"/>
+    <circle cx="406" cy="406" r="2.5" fill="#1A202C"/>
+    <!-- Woven Brand Label Inside -->
+    <rect x="330" y="170" width="140" height="50" rx="4" fill="#1A202C"/>
+    <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF" font-family="sans-serif">ZORVANI</text>
+    <text x="400" y="214" text-anchor="middle" font-size="10" fill="#E2E8F0" font-family="sans-serif">EST. 2026 • 100% COTTON</text>
+  `;
 }
 
 function shirtSide(color, fill, name, id) {
+  const dark = darken(color, 0.35);
   return `
-    <!-- Folded shirt -->
-    <rect x="200" y="300" width="400" height="250" rx="10" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Fold lines -->
-    <path d="M200 380 L600 380" stroke="${darken(color, 0.15)}" stroke-width="1.5"/>
-    <path d="M200 450" stroke="${darken(color, 0.15)}" stroke-width="1"/>
-    <!-- Collar peeking -->
-    <path d="M250 300 L350 280 L400 295 L450 280 L550 300" fill="none" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Sleeve fold -->
-    <rect x="220" y="310" width="80" height="40" rx="5" fill="${lighten(color, 0.15)}" stroke="${darken(color, 0.2)}" stroke-width="1"/>`;
+    <ellipse cx="400" cy="620" rx="190" ry="20" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <!-- Neatly Folded Boutique Presentation -->
+    <rect x="220" y="240" width="360" height="360" rx="16" fill="${fill}" stroke="${dark}" stroke-width="3"/>
+    <!-- Fold Shadows -->
+    <rect x="220" y="240" width="360" height="90" fill="#FFFFFF" opacity="0.15"/>
+    <line x1="220" y1="330" x2="580" y2="330" stroke="${dark}" stroke-width="2" opacity="0.6"/>
+    <!-- Collar Centered on Fold -->
+    <path d="M310 240 Q400 290 490 240 Q450 200 400 200 Q350 200 310 240 Z" fill="${lighten(color, 0.25)}" stroke="${dark}" stroke-width="2.5"/>
+    <circle cx="400" cy="300" r="8" fill="#FFFFFF" stroke="${dark}" stroke-width="1.8"/>
+    <!-- Silk Ribbon / Boutique Band -->
+    <rect x="220" y="440" width="360" height="48" fill="#1B2A4A" opacity="0.95"/>
+    <text x="400" y="470" text-anchor="middle" font-size="16" font-weight="bold" fill="#E05A47" font-family="sans-serif">ZORVANI WEAR</text>
+  `;
 }
 
+// ─── PANTS ILLUSTRATIONS (REALISTIC TROUSERS/DENIM) ──────────
+
 function pantsFront(color, fill, name, id) {
+  const dark = darken(color, 0.4);
+  const mid = darken(color, 0.15);
   return `
+    <ellipse cx="400" cy="660" rx="190" ry="20" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    
+    <!-- Left Leg -->
+    <path d="M240 230 L260 645 L385 645 L395 380 L350 230 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Right Leg -->
+    <path d="M450 230 L405 380 L415 645 L540 645 L560 230 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Crotch & Rise Center -->
+    <path d="M350 230 L395 380 L405 380 L450 230 Z" fill="${fill}"/>
+    
     <!-- Waistband -->
-    <rect x="220" y="180" width="360" height="50" rx="5" fill="${darken(color, 0.1)}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Belt loops -->
-    <rect x="260" y="175" width="12" height="60" rx="2" fill="${darken(color, 0.2)}"/>
-    <rect x="395" y="175" width="12" height="60" rx="2" fill="${darken(color, 0.2)}"/>
-    <rect x="530" y="175" width="12" height="60" rx="2" fill="${darken(color, 0.2)}"/>
-    <!-- Left leg -->
-    <path d="M220 230 L240 650 L380 650 L400 400 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Right leg -->
-    <path d="M400 400 L420 650 L560 650 L580 230 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Front crease -->
-    <line x1="310" y1="280" x2="310" y2="630" stroke="${darken(color, 0.1)}" stroke-width="1"/>
-    <line x1="490" y1="280" x2="490" y2="630" stroke="${darken(color, 0.1)}" stroke-width="1"/>
-    <!-- Pockets -->
-    <path d="M250 240 L250 340 L340 320 L340 240" fill="none" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <path d="M460 240 L460 320 L550 340 L550 240" fill="none" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>`;
+    <rect x="235" y="180" width="330" height="52" rx="4" fill="${darken(color, 0.1)}" stroke="${dark}" stroke-width="2.5"/>
+    <line x1="235" y1="184" x2="565" y2="184" stroke="${mid}" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="235" y1="228" x2="565" y2="228" stroke="${mid}" stroke-width="1" stroke-dasharray="3,2"/>
+    
+    <!-- Belt Loops -->
+    ${[270, 345, 455, 530].map(x => `
+      <rect x="${x}" y="174" width="12" height="64" rx="2" fill="${darken(color, 0.25)}" stroke="${dark}" stroke-width="1"/>
+      <line x1="${x}" y1="178" x2="${x + 12}" y2="178" stroke="#F6AD55" stroke-width="2"/>
+      <line x1="${x}" y1="234" x2="${x + 12}" y2="234" stroke="#F6AD55" stroke-width="2"/>
+    `).join('')}
+    
+    <!-- Shank Button (Antique Brass / Gunmetal) -->
+    <circle cx="400" cy="206" r="10" fill="#D69E2E" stroke="#744210" stroke-width="2"/>
+    <circle cx="400" cy="206" r="6" fill="#B7791F"/>
+    
+    <!-- J-Stitch Fly -->
+    <path d="M400 232 L400 320 Q400 350 380 360" stroke="#D69E2E" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+    
+    <!-- Curved Front Pockets with Rivets -->
+    <path d="M240 232 Q290 240 310 290" stroke="${dark}" stroke-width="2" fill="none"/>
+    <circle cx="310" cy="290" r="3.5" fill="#D69E2E"/>
+    <path d="M560 232 Q510 240 490 290" stroke="${dark}" stroke-width="2" fill="none"/>
+    <circle cx="490" cy="290" r="3.5" fill="#D69E2E"/>
+    
+    <!-- Ankle Hem Cuffs -->
+    <line x1="260" y1="635" x2="385" y2="635" stroke="${mid}" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="415" y1="635" x2="540" y2="635" stroke="${mid}" stroke-width="1.5" stroke-dasharray="3,2"/>
+  `;
 }
 
 function pantsBack(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Waistband back -->
-    <rect x="220" y="180" width="360" height="50" rx="5" fill="${darken(color, 0.1)}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Belt loops -->
-    <rect x="260" y="175" width="12" height="60" rx="2" fill="${darken(color, 0.2)}"/>
-    <rect x="530" y="175" width="12" height="60" rx="2" fill="${darken(color, 0.2)}"/>
-    <!-- Left leg -->
-    <path d="M220 230 L240 650 L380 650 L400 400 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Right leg -->
-    <path d="M400 400 L420 650 L560 650 L580 230 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Back pockets -->
-    <rect x="270" y="280" width="90" height="80" rx="5" fill="none" stroke="${darken(color, 0.25)}" stroke-width="1.5"/>
-    <rect x="440" y="280" width="90" height="80" rx="5" fill="none" stroke="${darken(color, 0.25)}" stroke-width="1.5"/>
-    <!-- Pocket stitching -->
-    <path d="M280 320 L350 320" stroke="${darken(color, 0.3)}" stroke-width="1" stroke-dasharray="3,2"/>
-    <path d="M450 320 L520 320" stroke="${darken(color, 0.3)}" stroke-width="1" stroke-dasharray="3,2"/>`;
+    <ellipse cx="400" cy="660" rx="190" ry="20" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <path d="M240 230 L260 645 L385 645 L395 380 L350 230 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <path d="M450 230 L405 380 L415 645 L540 645 L560 230 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <path d="M350 230 L395 380 L405 380 L450 230 Z" fill="${fill}"/>
+    <rect x="235" y="180" width="330" height="52" rx="4" fill="${darken(color, 0.1)}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Leather Brand Patch -->
+    <rect x="475" y="184" width="70" height="44" rx="3" fill="#8B4513" stroke="#5C2C0A" stroke-width="1.5"/>
+    <text x="510" y="210" text-anchor="middle" font-size="8" font-weight="bold" fill="#F7FAFC" font-family="sans-serif">ZORVANI</text>
+    <!-- Back Yoke V-Seam -->
+    <path d="M235 250 L400 280 L565 250" stroke="${dark}" stroke-width="2" fill="none"/>
+    <!-- Back Pockets -->
+    <path d="M270 290 L345 290 L345 365 L307 385 L270 365 Z" fill="${darken(color, 0.05)}" stroke="${dark}" stroke-width="2"/>
+    <path d="M275 325 Q307 350 340 325" stroke="#D69E2E" stroke-width="1.5" fill="none"/>
+    <path d="M455 290 L530 290 L530 365 L492 385 L455 365 Z" fill="${darken(color, 0.05)}" stroke="${dark}" stroke-width="2"/>
+    <path d="M460 325 Q492 350 525 325" stroke="#D69E2E" stroke-width="1.5" fill="none"/>
+  `;
 }
 
 function pantsDetail(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Waistband close-up -->
-    <rect x="150" y="250" width="500" height="80" rx="8" fill="${darken(color, 0.1)}" stroke="${darken(color, 0.3)}" stroke-width="2.5"/>
-    <!-- Belt loops close -->
-    <rect x="220" y="240" width="18" height="100" rx="3" fill="${darken(color, 0.2)}" stroke="${darken(color, 0.35)}" stroke-width="1"/>
-    <rect x="390" y="240" width="18" height="100" rx="3" fill="${darken(color, 0.2)}" stroke="${darken(color, 0.35)}" stroke-width="1"/>
-    <rect x="560" y="240" width="18" height="100" rx="3" fill="${darken(color, 0.2)}" stroke="${darken(color, 0.35)}" stroke-width="1"/>
-    <!-- Zipper/fly area -->
-    <rect x="370" y="330" width="60" height="120" rx="3" fill="${darken(color, 0.08)}" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <line x1="400" y1="340" x2="400" y2="440" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Button -->
-    <circle cx="400" cy="290" r="12" fill="${darken(color, 0.3)}" stroke="${darken(color, 0.4)}" stroke-width="1.5"/>
-    <!-- Fabric below -->
-    <rect x="150" y="330" width="220" height="200" fill="${fill}" stroke="none"/>
-    <rect x="430" y="330" width="220" height="200" fill="${fill}" stroke="none"/>`;
+    <!-- Close-Up Waist & Front Pocket Details -->
+    <rect x="160" y="180" width="480" height="440" rx="20" fill="${fill}" stroke="${dark}" stroke-width="3"/>
+    <rect x="160" y="180" width="480" height="90" fill="${darken(color, 0.1)}" stroke="${dark}" stroke-width="2"/>
+    <!-- Belt Loop -->
+    <rect x="310" y="170" width="22" height="110" rx="3" fill="${darken(color, 0.25)}" stroke="${dark}" stroke-width="1.5"/>
+    <line x1="310" y1="180" x2="332" y2="180" stroke="#F6AD55" stroke-width="3"/>
+    <line x1="310" y1="270" x2="332" y2="270" stroke="#F6AD55" stroke-width="3"/>
+    <!-- Large Antique Brass Button -->
+    <circle cx="440" cy="225" r="24" fill="#D69E2E" stroke="#5C3B0E" stroke-width="3"/>
+    <circle cx="440" cy="225" r="16" fill="#B7791F"/>
+    <text x="440" y="230" text-anchor="middle" font-size="10" font-weight="bold" fill="#5C3B0E" font-family="sans-serif">ZW 26</text>
+    <!-- Coin Pocket Detail -->
+    <rect x="190" y="320" width="110" height="85" rx="4" fill="${darken(color, 0.08)}" stroke="${dark}" stroke-width="2"/>
+    <circle cx="205" cy="335" r="5" fill="#D69E2E"/>
+    <circle cx="285" cy="335" r="5" fill="#D69E2E"/>
+    <!-- Rivet Contrast -->
+    <line x1="190" y1="360" x2="300" y2="360" stroke="#F6AD55" stroke-width="2" stroke-dasharray="4,2"/>
+  `;
 }
 
 function pantsSide(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Side profile pants -->
-    <path d="M350 180 L450 180 L460 230 L470 650 L420 650 L400 400 L380 650 L330 650 L340 230 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Waistband -->
-    <rect x="340" y="180" width="120" height="50" rx="5" fill="${darken(color, 0.1)}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Side seam -->
-    <line x1="460" y1="230" x2="470" y2="640" stroke="${darken(color, 0.15)}" stroke-width="1.5"/>
-    <!-- Side pocket -->
-    <path d="M445 250 L460 250 L465 350 L445 340 Z" fill="none" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>`;
+    <ellipse cx="400" cy="650" rx="160" ry="18" fill="#000000" opacity="0.12" filter="url(#shadow-filter)"/>
+    <!-- Elegant Side Profile -->
+    <path d="M360 180 L440 180 Q465 240 455 640 L375 640 Q350 400 345 240 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <rect x="350" y="180" width="95" height="48" rx="4" fill="${darken(color, 0.1)}" stroke="${dark}" stroke-width="2"/>
+    <!-- Outer Side Seam with Double Stitching -->
+    <line x1="410" y1="228" x2="410" y2="640" stroke="${dark}" stroke-width="2"/>
+    <line x1="414" y1="228" x2="414" y2="640" stroke="#D69E2E" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.7"/>
+    <!-- Side Pocket -->
+    <path d="M410 240 L370 290" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Turn-up Hem Cuff -->
+    <rect x="370" y="615" width="90" height="25" fill="${darken(color, 0.15)}" stroke="${dark}" stroke-width="2"/>
+  `;
+}
+
+// ─── SHOE ILLUSTRATIONS (REALISTIC SNEAKERS & LEATHER FOOTWEAR) ────────
+
+function shoeSide(color, fill, name, id) {
+  const dark = darken(color, 0.4);
+  const soleWhite = '#F7FAFC';
+  const mid = darken(color, 0.15);
+  return `
+    <!-- Contact Ground Shadow -->
+    <ellipse cx="400" cy="570" rx="260" ry="16" fill="#000000" opacity="0.18" filter="url(#shadow-filter)"/>
+    
+    <!-- Rubber Outsole Lugs -->
+    <path d="M150 540 L650 540 L645 558 Q400 565 155 558 Z" fill="#2D3748" stroke="#1A202C" stroke-width="2"/>
+    
+    <!-- Sculpted Cushioned Midsole (Sneaker / Comfort Sole) -->
+    <path d="M142 510 Q280 525 430 520 Q560 528 658 510 L650 540 L150 540 Z" fill="${soleWhite}" stroke="#CBD5E0" stroke-width="1.8"/>
+    <!-- Air / Gel Cushion Accent Window -->
+    <rect x="480" y="520" width="70" height="14" rx="7" fill="#E2E8F0" stroke="#A0AEC0" stroke-width="1"/>
+    <line x1="500" y1="520" x2="500" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    <line x1="515" y1="520" x2="515" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    <line x1="530" y1="520" x2="530" y2="534" stroke="#CBD5E0" stroke-width="2"/>
+    
+    <!-- Upper Body Contour -->
+    <path d="M145 510 Q160 410 240 370 Q340 340 430 330 Q530 310 590 350 Q635 390 655 510 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    
+    <!-- Suede / Leather Toe Mudguard -->
+    <path d="M145 510 Q160 410 240 370 Q215 470 230 512 Z" fill="${darken(color, 0.12)}" stroke="${dark}" stroke-width="2"/>
+    
+    <!-- Ankle Collar Padding & Opening -->
+    <path d="M490 325 Q545 300 590 350 Q560 380 490 340 Z" fill="#2D3748"/>
+    <path d="M495 320 Q550 305 585 345" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6"/>
+    
+    <!-- Eyestay & Lacing System -->
+    <path d="M290 360 L480 330 L465 375 L300 405 Z" fill="${darken(color, 0.18)}" stroke="${dark}" stroke-width="1.8"/>
+    <!-- Criss-Cross Laces -->
+    ${[
+      [315, 385, 335, 350],
+      [350, 375, 370, 345],
+      [385, 365, 405, 340],
+      [420, 355, 440, 335],
+    ].map(([x1, y1, x2, y2]) => `
+      <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#A0AEC0" stroke-width="1.5" stroke-linecap="round"/>
+    `).join('')}
+    
+    <!-- Aerodynamic Side Swoosh / Brand Stripe Wave -->
+    <path d="M230 450 Q380 470 540 370 Q420 500 240 475 Z" fill="#E05A47" opacity="0.9" stroke="${dark}" stroke-width="1.5"/>
+    
+    <!-- Heel Counter Support Overlay -->
+    <path d="M570 380 Q620 400 655 510 L585 510 Q560 430 570 380 Z" fill="${darken(color, 0.22)}" stroke="${dark}" stroke-width="1.5"/>
+  `;
 }
 
 function shoeFront(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Shoe top-front view -->
-    <ellipse cx="400" cy="500" rx="180" ry="60" fill="${darken(color, 0.1)}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Shoe upper -->
-    <path d="M220 500 L240 350 L350 300 L400 290 L450 300 L560 350 L580 500 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Toe box -->
-    <ellipse cx="400" cy="340" rx="80" ry="30" fill="${lighten(color, 0.1)}" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <!-- Lacing area -->
-    <line x1="380" y1="350" x2="420" y2="350" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <line x1="375" y1="370" x2="425" y2="370" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <line x1="370" y1="390" x2="430" y2="390" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <line x1="365" y1="410" x2="435" y2="410" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <!-- Tongue -->
-    <path d="M375 350 L400 310 L425 350" fill="${lighten(color, 0.2)}" stroke="${darken(color, 0.2)}" stroke-width="1"/>`;
+    <ellipse cx="400" cy="620" rx="160" ry="24" fill="#000000" opacity="0.16" filter="url(#shadow-filter)"/>
+    <!-- Top-Down 3D Perspective -->
+    <!-- Outsole Edge -->
+    <path d="M270 560 Q240 400 290 280 Q400 220 510 280 Q560 400 530 560 Q400 620 270 560 Z" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="3"/>
+    <!-- Upper Body -->
+    <path d="M285 540 Q260 400 305 300 Q400 250 495 300 Q540 400 515 540 Q400 595 285 540 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Perforated Toe Vamp -->
+    <path d="M320 320 Q400 280 480 320 Q440 390 360 390 Z" fill="${darken(color, 0.1)}" stroke="${dark}" stroke-width="1.5"/>
+    ${[
+      [400, 310], [385, 330], [415, 330], [370, 350], [400, 350], [430, 350]
+    ].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="2.5" fill="${dark}"/>`).join('')}
+    <!-- Lacing Array -->
+    ${[390, 425, 460, 495].map(y => `
+      <rect x="350" y="${y}" width="100" height="8" rx="4" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+    `).join('')}
+    <!-- Tongue Badge -->
+    <rect x="365" y="515" width="70" height="30" rx="4" fill="#1A202C"/>
+    <text x="400" y="534" text-anchor="middle" font-size="10" font-weight="bold" fill="#E05A47" font-family="sans-serif">ZORVANI</text>
+  `;
 }
 
 function shoeBack(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Sole back -->
-    <rect x="250" y="510" width="300" height="30" rx="5" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="2"/>
-    <!-- Heel counter -->
-    <path d="M270 510 L270 370 L330 340 L400 330 L470 340 L530 370 L530 510 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Heel tab -->
-    <rect x="370" y="330" width="60" height="30" rx="5" fill="${lighten(color, 0.3)}" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <text x="400" y="350" text-anchor="middle" font-size="10" fill="${darken(color, 0.4)}" font-family="sans-serif">ZW</text>
-    <!-- Heel accent -->
-    <path d="M290 480 L510 480" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <!-- Collar -->
-    <ellipse cx="400" cy="345" rx="90" ry="25" fill="none" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>`;
+    <ellipse cx="400" cy="620" rx="140" ry="20" fill="#000000" opacity="0.16" filter="url(#shadow-filter)"/>
+    <rect x="290" y="550" width="220" height="38" rx="8" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="2"/>
+    <!-- Heel Counter Column -->
+    <path d="M305 550 Q290 380 340 330 Q400 310 460 330 Q510 380 495 550 Z" fill="${fill}" stroke="${dark}" stroke-width="2.5"/>
+    <!-- Pull Tab Ribbon -->
+    <rect x="382" y="270" width="36" height="75" rx="4" fill="#E05A47" stroke="#9C2615" stroke-width="1.5"/>
+    <text x="400" y="315" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF" font-family="sans-serif" transform="rotate(-90 400 315)">ZW-RUN</text>
+    <!-- Ankle Collar Cushioned Opening -->
+    <ellipse cx="400" cy="335" rx="55" ry="18" fill="#1A202C" stroke="${dark}" stroke-width="2"/>
+    <!-- Reflective Heel Strip -->
+    <line x1="400" y1="360" x2="400" y2="520" stroke="#CBD5E0" stroke-width="8" stroke-linecap="round"/>
+    <line x1="400" y1="360" x2="400" y2="520" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  `;
 }
 
 function shoeDetail(color, fill, name, id) {
+  const dark = darken(color, 0.4);
   return `
-    <!-- Sole pattern close-up -->
-    <rect x="200" y="250" width="400" height="300" rx="20" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="2.5"/>
-    <!-- Tread pattern -->
-    <line x1="230" y1="290" x2="570" y2="290" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <line x1="230" y1="330" x2="570" y2="330" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <line x1="230" y1="370" x2="570" y2="370" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <line x1="230" y1="410" x2="570" y2="410" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <line x1="230" y1="450" x2="570" y2="450" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <line x1="230" y1="490" x2="570" y2="490" stroke="${darken(color, 0.3)}" stroke-width="3"/>
-    <!-- Cross treads -->
-    <line x1="300" y1="260" x2="300" y2="540" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <line x1="400" y1="260" x2="400" y2="540" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <line x1="500" y1="260" x2="500" y2="540" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Brand circle -->
-    <circle cx="400" cy="400" r="40" fill="${darken(color, 0.35)}" stroke="${darken(color, 0.5)}" stroke-width="2"/>
-    <text x="400" y="405" text-anchor="middle" font-size="14" fill="${lighten(color, 0.3)}" font-family="sans-serif" font-weight="bold">ZW</text>`;
-}
-
-function shoeSide(color, fill, name, id) {
-  return `
-    <!-- Sole -->
-    <path d="M150 520 L650 520 L660 540 L640 550 L160 550 L140 540 Z" fill="${darken(color, 0.4)}" stroke="${darken(color, 0.5)}" stroke-width="2"/>
-    <!-- Midsole -->
-    <path d="M160 510 L640 510 L650 520 L150 520 Z" fill="#EEEEEE" stroke="${darken(color, 0.3)}" stroke-width="1"/>
-    <!-- Shoe upper -->
-    <path d="M180 510 L200 350 L280 300 L380 280 L500 290 L580 330 L620 420 L630 510 Z" fill="${fill}" stroke="${darken(color, 0.3)}" stroke-width="2"/>
-    <!-- Toe cap -->
-    <path d="M180 510 L200 420 L280 380 L300 510" fill="${lighten(color, 0.1)}" stroke="${darken(color, 0.2)}" stroke-width="1.5"/>
-    <!-- Collar/opening -->
-    <path d="M480 310 L540 340 L580 380" fill="none" stroke="${darken(color, 0.2)}" stroke-width="2"/>
-    <!-- Laces -->
-    <line x1="350" y1="310" x2="420" y2="300" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <line x1="340" y1="330" x2="410" y2="315" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <line x1="330" y1="350" x2="400" y2="332" stroke="${darken(color, 0.4)}" stroke-width="2"/>
-    <!-- Logo -->
-    <circle cx="460" cy="420" r="15" fill="${darken(color, 0.2)}" opacity="0.5"/>`;
+    <!-- High-Traction Outsole Tread Macro -->
+    <rect x="180" y="180" width="440" height="440" rx="24" fill="#1A202C" stroke="#2D3748" stroke-width="4"/>
+    <!-- Waffle & Hex Grip Pattern -->
+    ${[220, 280, 340, 400, 460, 520].map(y => `
+      <line x1="210" y1="${y}" x2="590" y2="${y}" stroke="#4A5568" stroke-width="5" stroke-dasharray="14,14"/>
+    `).join('')}
+    <!-- Center Pivot Circle / Tech Branding -->
+    <circle cx="400" cy="400" r="64" fill="#E05A47" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="400" cy="400" r="48" fill="#1A202C" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="400" y="398" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF" font-family="sans-serif">GRIP-MAX</text>
+    <text x="400" y="415" text-anchor="middle" font-size="9" fill="#A0AEC0" font-family="sans-serif">ALL-WEATHER</text>
+  `;
 }
 
 // ─── Build complete SVG ──────────────────────────────────────
@@ -300,17 +439,37 @@ function buildSVG(product, viewIndex) {
   if (!generator) return null;
 
   const illustration = generator(color, fill, product.name, patternId);
-
   const viewLabel = view.charAt(0).toUpperCase() + view.slice(1);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <title>${product.name} - ${viewLabel} View</title>
   <desc>${viewLabel} view of ${product.name}. Category: ${product.category}. Color: ${product.colors[0]}. This is a demo product image.</desc>
+  <defs>
+    <!-- Soft Studio Radial Backdrop -->
+    <radialGradient id="studio-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <filter id="shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
   ${patternDefs}
-  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+  <!-- Clean Studio Canvas -->
+  <rect width="800" height="800" fill="url(#studio-bg)"/>
+  
+  <!-- Subtle Framing Pedestal / Vignette -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  
+  <!-- Apparel / Footwear Artwork -->
   ${illustration}
-  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">${product.name}</text>
-  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">${viewLabel} View • DEMO</text>
+  
+  <!-- Minimalist Luxury Watermark / Tag -->
+  <rect x="250" y="722" width="300" height="34" rx="17" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.95"/>
+  <text x="400" y="743" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B2A4A" letter-spacing="1.5" font-family="sans-serif">${product.name.toUpperCase()}</text>
+  <text x="400" y="775" text-anchor="middle" font-size="10" fill="#94A3B8" letter-spacing="1" font-family="sans-serif">${viewLabel.toUpperCase()} VIEW • DEMO STORE</text>
 </svg>`;
 }
 
