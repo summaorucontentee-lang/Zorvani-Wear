@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Tommy Hilfiger Casual Linen - Navy - Side View</title>
+  <desc>Side view of Tommy Hilfiger Casual Linen - Navy. Category: Shirts. Color: Navy. This is a demo product image.</desc>
+  
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Folded shirt -->
+    <rect x="200" y="300" width="400" height="250" rx="10" fill="#1B2A4A" stroke="#121d33" stroke-width="2"/>
+    <!-- Fold lines -->
+    <path d="M200 380 L600 380" stroke="#16233e" stroke-width="1.5"/>
+    <path d="M200 450" stroke="#16233e" stroke-width="1"/>
+    <!-- Collar peeking -->
+    <path d="M250 300 L350 280 L400 295 L450 280 L550 300" fill="none" stroke="#121d33" stroke-width="2"/>
+    <!-- Sleeve fold -->
+    <rect x="220" y="310" width="80" height="40" rx="5" fill="#3d4965" stroke="#15213b" stroke-width="1"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Tommy Hilfiger Casual Linen - Navy</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Side View • DEMO</text>
+</svg>

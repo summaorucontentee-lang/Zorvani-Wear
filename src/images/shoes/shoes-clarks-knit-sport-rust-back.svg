@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Clarks Knit Sport - Rust - Back View</title>
+  <desc>Back view of Clarks Knit Sport - Rust. Category: Shoes. Color: Rust. This is a demo product image.</desc>
+  
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Sole back -->
+    <rect x="250" y="510" width="300" height="30" rx="5" fill="#6d2708" stroke="#5b2007" stroke-width="2"/>
+    <!-- Heel counter -->
+    <path d="M270 510 L270 370 L330 340 L400 330 L470 340 L530 370 L530 510 Z" fill="#B7410E" stroke="#802d09" stroke-width="2"/>
+    <!-- Heel tab -->
+    <rect x="370" y="330" width="60" height="30" rx="5" fill="#cc7a56" stroke="#92340b" stroke-width="1.5"/>
+    <text x="400" y="350" text-anchor="middle" font-size="10" fill="#6d2708" font-family="sans-serif">ZW</text>
+    <!-- Heel accent -->
+    <path d="M290 480 L510 480" stroke="#92340b" stroke-width="1.5"/>
+    <!-- Collar -->
+    <ellipse cx="400" cy="345" rx="90" ry="25" fill="none" stroke="#92340b" stroke-width="1.5"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Clarks Knit Sport - Rust</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Back View • DEMO</text>
+</svg>

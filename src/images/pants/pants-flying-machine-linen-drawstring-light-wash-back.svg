@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Flying Machine Linen Drawstring - Light Wash - Back View</title>
+  <desc>Back view of Flying Machine Linen Drawstring - Light Wash. Category: Pants. Color: Light Wash. This is a demo product image.</desc>
+  
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Waistband back -->
+    <rect x="220" y="180" width="360" height="50" rx="5" fill="#7e99b7" stroke="#62768e" stroke-width="2"/>
+    <!-- Belt loops -->
+    <rect x="260" y="175" width="12" height="60" rx="2" fill="#7088a3"/>
+    <rect x="530" y="175" width="12" height="60" rx="2" fill="#7088a3"/>
+    <!-- Left leg -->
+    <path d="M220 230 L240 650 L380 650 L400 400 Z" fill="#8CAACC" stroke="#62768e" stroke-width="2"/>
+    <!-- Right leg -->
+    <path d="M400 400 L420 650 L560 650 L580 230 Z" fill="#8CAACC" stroke="#62768e" stroke-width="2"/>
+    <!-- Back pockets -->
+    <rect x="270" y="280" width="90" height="80" rx="5" fill="none" stroke="#697f99" stroke-width="1.5"/>
+    <rect x="440" y="280" width="90" height="80" rx="5" fill="none" stroke="#697f99" stroke-width="1.5"/>
+    <!-- Pocket stitching -->
+    <path d="M280 320 L350 320" stroke="#62768e" stroke-width="1" stroke-dasharray="3,2"/>
+    <path d="M450 320 L520 320" stroke="#62768e" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Flying Machine Linen Drawstring - Light Wash</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Back View • DEMO</text>
+</svg>

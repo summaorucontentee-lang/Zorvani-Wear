@@ -324,6 +324,15 @@ if (!fs.existsSync(productsPath)) {
 
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
+// Clean image directories before generating
+['shirts', 'pants', 'shoes'].forEach(cat => {
+  const catDir = path.join(ROOT, 'src', 'images', cat);
+  if (fs.existsSync(catDir)) {
+    fs.rmSync(catDir, { recursive: true, force: true });
+  }
+  fs.mkdirSync(catDir, { recursive: true });
+});
+
 let generated = 0;
 let errors = 0;
 

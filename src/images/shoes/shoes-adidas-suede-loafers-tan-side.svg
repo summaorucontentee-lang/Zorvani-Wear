@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Adidas Suede Loafers - Tan - Side View</title>
+  <desc>Side view of Adidas Suede Loafers - Tan. Category: Shoes. Color: Tan. This is a demo product image.</desc>
+  
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Sole -->
+    <path d="M150 520 L650 520 L660 540 L640 550 L160 550 L140 540 Z" fill="#7e6c54" stroke="#695a46" stroke-width="2"/>
+    <!-- Midsole -->
+    <path d="M160 510 L640 510 L650 520 L150 520 Z" fill="#EEEEEE" stroke="#937d62" stroke-width="1"/>
+    <!-- Shoe upper -->
+    <path d="M180 510 L200 350 L280 300 L380 280 L500 290 L580 330 L620 420 L630 510 Z" fill="#D2B48C" stroke="#937d62" stroke-width="2"/>
+    <!-- Toe cap -->
+    <path d="M180 510 L200 420 L280 380 L300 510" fill="#d6bb97" stroke="#a89070" stroke-width="1.5"/>
+    <!-- Collar/opening -->
+    <path d="M480 310 L540 340 L580 380" fill="none" stroke="#a89070" stroke-width="2"/>
+    <!-- Laces -->
+    <line x1="350" y1="310" x2="420" y2="300" stroke="#7e6c54" stroke-width="2"/>
+    <line x1="340" y1="330" x2="410" y2="315" stroke="#7e6c54" stroke-width="2"/>
+    <line x1="330" y1="350" x2="400" y2="332" stroke="#7e6c54" stroke-width="2"/>
+    <!-- Logo -->
+    <circle cx="460" cy="420" r="15" fill="#a89070" opacity="0.5"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Adidas Suede Loafers - Tan</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Side View • DEMO</text>
+</svg>

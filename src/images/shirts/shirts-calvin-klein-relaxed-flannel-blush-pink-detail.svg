@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Calvin Klein Relaxed Flannel - Blush Pink - Detail View</title>
+  <desc>Detail view of Calvin Klein Relaxed Flannel - Blush Pink. Category: Shirts. Color: Blush Pink. This is a demo product image.</desc>
+  
+  <rect width="800" height="800" fill="#F5F5F5"/>
+  
+    <!-- Close-up collar area -->
+    <path d="M200 350 L340 250 L400 300 L460 250 L600 350 L540 400 L460 360 L400 380 L340 360 L260 400 Z" fill="#f8c9d4" stroke="#aa7480" stroke-width="2.5"/>
+    <!-- Collar stand -->
+    <path d="M280 370 L520 370" stroke="#c38493" stroke-width="2"/>
+    <!-- Placket -->
+    <rect x="385" y="370" width="30" height="250" fill="#f7c0cd" stroke="#c38493" stroke-width="1.5"/>
+    <!-- Buttons close-up -->
+    <circle cx="400" cy="420" r="8" fill="#92636e" stroke="#7a535c" stroke-width="1"/>
+    <circle cx="400" cy="480" r="8" fill="#92636e" stroke="#7a535c" stroke-width="1"/>
+    <circle cx="400" cy="540" r="8" fill="#92636e" stroke="#7a535c" stroke-width="1"/>
+    <!-- Button holes -->
+    <line x1="396" y1="420" x2="404" y2="420" stroke="#f7c0cd" stroke-width="1.5"/>
+    <line x1="396" y1="480" x2="404" y2="480" stroke="#f7c0cd" stroke-width="1.5"/>
+    <line x1="396" y1="540" x2="404" y2="540" stroke="#f7c0cd" stroke-width="1.5"/>
+    <!-- Fabric area -->
+    <rect x="200" y="370" width="185" height="250" fill="#F4A6B8" stroke="none"/>
+    <rect x="415" y="370" width="185" height="250" fill="#F4A6B8" stroke="none"/>
+  <text x="400" y="720" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">Calvin Klein Relaxed Flannel - Blush Pink</text>
+  <text x="400" y="740" text-anchor="middle" font-size="10" fill="#BBB" font-family="sans-serif">Detail View • DEMO</text>
+</svg>

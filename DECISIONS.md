@@ -37,3 +37,7 @@ This document logs all choices made where specifications allowed discretion or r
 ## 9. Cloud Static Hosting Deployment (Vercel / Netlify)
 - **Decision:** Added `vercel.json` configuring `outputDirectory: "src"` so the static assets in `src/` are served at the domain root. Added `scripts/build.js` which generates data, SVGs, sitemap, and runs unit tests; if running in cloud CI/CD environments (Vercel/Netlify where `process.env.VERCEL` is set), it skips the local headless browser launcher so deployment builds succeed instantly without requiring Linux browser binaries.
 - **Rationale:** Standard static cloud providers do not include Playwright browser binaries in their default serverless build environments.
+
+## 10. Top Brands Catalog Integration
+- **Decision:** Integrated top global brand names (Shirts: Zara, Ralph Lauren, Tommy Hilfiger, Calvin Klein, Raymond, etc.; Pants: Levi's, Wrangler, Lee, Dockers, Pepe Jeans, etc.; Shoes: Nike, Adidas, Puma, Vans, Converse, Woodland, etc.) into product titles and descriptions across all 66 products while retaining the mandatory top demo banner ("DEMO STORE: no real products, no real payments") on every page.
+- **Rationale:** Directly fulfills user request to showcase recognizable top brand naming styles across the catalog.

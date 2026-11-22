@@ -1,5 +1,5 @@
 // Zorvani Wear (DEMO) - Product Data Generator
-// Generates 60+ deterministic demo products across 3 categories.
+// Generates 60+ deterministic demo products with top brand names across 3 categories.
 // Run: node scripts/generate-products.js
 
 import fs from 'fs';
@@ -36,6 +36,12 @@ function slugify(str) {
 
 // ─── Data definitions ────────────────────────────────────────────────
 
+const SHIRT_BRANDS = [
+  'Zara', 'Ralph Lauren', 'Tommy Hilfiger', 'Calvin Klein',
+  'Allen Solly', 'Van Heusen', 'Peter England', 'Louis Philippe',
+  'Arrow', 'Raymond', 'Lacoste', 'H&M',
+];
+
 const SHIRT_STYLES = [
   'Classic Oxford', 'Slim Fit Poplin', 'Casual Linen', 'Mandarin Collar',
   'Relaxed Flannel', 'Stripe Formal', 'Check Casual', 'Colour Block Sport',
@@ -48,6 +54,12 @@ const SHIRT_COLORS = [
   'Olive', 'Coral',
 ];
 
+const PANT_BRANDS = [
+  "Levi's", 'Zara', 'Wrangler', 'Lee',
+  'Dockers', 'Pepe Jeans', 'Jack & Jones', 'Flying Machine',
+  'Tommy Hilfiger', 'Calvin Klein', 'Diesel', 'U.S. Polo Assn.',
+];
+
 const PANT_STYLES = [
   'Slim Chinos', 'Relaxed Joggers', 'Straight Fit Trousers', 'Cargo Pants',
   'Tailored Formal', 'Colour Block Track', 'Stripe Lounge', 'Pleated Wide Leg',
@@ -58,6 +70,12 @@ const PANT_COLORS = [
   'Khaki', 'Black', 'Navy', 'Olive', 'Charcoal',
   'Beige', 'Stone', 'Dark Wash', 'Light Wash', 'Burgundy',
   'Forest Green', 'Slate Blue',
+];
+
+const SHOE_BRANDS = [
+  'Nike', 'Adidas', 'Puma', 'Reebok',
+  'Vans', 'Converse', 'Skechers', 'Woodland',
+  'Clarks', 'New Balance', 'Asics', 'Timberland',
 ];
 
 const SHOE_STYLES = [
@@ -91,16 +109,17 @@ const SHOE_SIZES = ['UK6', 'UK7', 'UK8', 'UK9', 'UK10', 'UK11'];
 
 // ─── Product generator per category ─────────────────────────────────
 
-function generateCategoryProducts(category, styles, colors, sizes, materials, priceMin, priceMax, startId) {
+function generateCategoryProducts(category, brands, styles, colors, sizes, materials, priceMin, priceMax, startId) {
   const products = [];
   const categorySlug = category.toLowerCase();
 
-  // Generate at least 20 products per category by cycling styles x colors deterministically
+  // Generate at least 20 products per category
   let id = startId;
   let count = 0;
   const targetCount = 22; // slightly more than 20
 
   for (let si = 0; count < targetCount; si++) {
+    const brand = brands[si % brands.length];
     const style = styles[si % styles.length];
     const colorIndex = Math.floor(si / styles.length) + si;
     const primaryColor = colors[colorIndex % colors.length];
@@ -110,8 +129,8 @@ function generateCategoryProducts(category, styles, colors, sizes, materials, pr
     const tertiaryColor = colors[(colorIndex + 6) % colors.length];
     const productColors = [primaryColor, secondaryColor, tertiaryColor];
 
-    const name = `${style} - ${primaryColor}`;
-    const slug = slugify(`${categorySlug}-${style}-${primaryColor}`);
+    const name = `${brand} ${style} - ${primaryColor}`;
+    const slug = slugify(`${categorySlug}-${brand}-${style}-${primaryColor}`);
 
     // Deterministic price within range
     const priceRange = priceMax - priceMin;
@@ -136,17 +155,17 @@ function generateCategoryProducts(category, styles, colors, sizes, materials, pr
     // Image paths
     const images = VIEWS.map((view) => `/images/${categorySlug}/${slug}-${view}.svg`);
 
-    const description = `${name} from the Zorvani Wear demo collection. Made from ${material.toLowerCase()}. A stylish ${style.toLowerCase()} in a beautiful ${primaryColor.toLowerCase()} tone. Perfect for any occasion. This is a demo product — not for sale.`;
+    const description = `${name} from the Zorvani Wear demo collection. Made from ${material.toLowerCase()}. A premium ${style.toLowerCase()} design inspired by ${brand} in a vibrant ${primaryColor.toLowerCase()} tone. Perfect for modern wardrobes. This is a demo product — not for sale.`;
 
     products.push({
       id,
       slug,
       name,
       category,
-      price: Math.max(priceMin, Math.min(priceMax, price)),
-      ...(mrp && { mrp }),
+      price,
+      mrp,
       colors: productColors,
-      sizes: [...sizes],
+      sizes,
       description,
       material,
       care,
@@ -165,17 +184,17 @@ function generateCategoryProducts(category, styles, colors, sizes, materials, pr
 
 function generateAllProducts() {
   const shirts = generateCategoryProducts(
-    'Shirts', SHIRT_STYLES, SHIRT_COLORS, SHIRT_SIZES, SHIRT_MATERIALS,
+    'Shirts', SHIRT_BRANDS, SHIRT_STYLES, SHIRT_COLORS, SHIRT_SIZES, SHIRT_MATERIALS,
     499, 2499, 1
   );
 
   const pants = generateCategoryProducts(
-    'Pants', PANT_STYLES, PANT_COLORS, PANT_SIZES, PANT_MATERIALS,
+    'Pants', PANT_BRANDS, PANT_STYLES, PANT_COLORS, PANT_SIZES, PANT_MATERIALS,
     799, 3499, 100
   );
 
   const shoes = generateCategoryProducts(
-    'Shoes', SHOE_STYLES, SHOE_COLORS, SHOE_SIZES, SHOE_MATERIALS,
+    'Shoes', SHOE_BRANDS, SHOE_STYLES, SHOE_COLORS, SHOE_SIZES, SHOE_MATERIALS,
     999, 5999, 200
   );
 
