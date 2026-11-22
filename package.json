@@ -10,8 +10,8 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "test": "node --test tests/unit/*.test.js",
     "test:e2e": "npx playwright test --config playwright.config.js",
-    "build": "npm run generate:data && npm run generate && npm run generate:sitemap && npm test && npm run test:e2e",
-    "verify": "npm run build"
+    "build": "node scripts/build.js",
+    "verify": "node scripts/build.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0"

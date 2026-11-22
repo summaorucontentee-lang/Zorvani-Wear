@@ -33,3 +33,7 @@ This document logs all choices made where specifications allowed discretion or r
 ## 8. Test Runner Configuration
 - **Decision:** Used Node.js native test runner (`node --test`) for lightning-fast unit tests (46 tests, 0 dependencies), and `@playwright/test` for multi-device end-to-end browser testing (Desktop Chrome and Mobile Chrome viewport).
 - **Rationale:** Clean, minimal dev dependencies without bloat.
+
+## 9. Cloud Static Hosting Deployment (Vercel / Netlify)
+- **Decision:** Added `vercel.json` configuring `outputDirectory: "src"` so the static assets in `src/` are served at the domain root. Added `scripts/build.js` which generates data, SVGs, sitemap, and runs unit tests; if running in cloud CI/CD environments (Vercel/Netlify where `process.env.VERCEL` is set), it skips the local headless browser launcher so deployment builds succeed instantly without requiring Linux browser binaries.
+- **Rationale:** Standard static cloud providers do not include Playwright browser binaries in their default serverless build environments.
